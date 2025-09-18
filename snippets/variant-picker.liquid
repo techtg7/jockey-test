@@ -1,0 +1,86 @@
+{% comment %} 
+ * A list of all the Size options on the site,
+ * sorted smallest to largest.
+ *
+ * IMPORTANT: 
+ * New values must be added to this list, 
+ * or they will not show
+{% endcomment %}
+{% assign size_order = "00,2-5,3-5,5-7,8,6-8,6-9,6-10,10,7-11,711,8-10,9-11,10-13,12,12-14,1214,14,15-16,1516,16,XS/S,XS,4/S,S,S/M,5/M,M/L,6/L,7/XL,8/XXL,XL/2X,10A,10B,10C,10D,12A,12B,12C,12D,14A,14B,14C,14D,30,32,3348,34,3450,XS/34,36,S/36,3652,ST,37,38,M/38,3854,M,MT,39,40,L/40,4056,L,LT,L/XL,41,42,XL/42,4258,XL,XLT,43,44,2X/44,2XL/44,2XL,XXL,2XLT,45,46,3X/46,47,48,4850,49,50,52,54,56,2X/3X,58,3X,3XL,XXXL,3XLT,3X/4X,3XL/4XL,60,4XL,4XLT,5XL,5XLT,5X/6X,6XL,6XLT,98,102,106,110,28A,28B,28C,28D,28DD,28E,30AA,30A,30B,30C,30D,30DD,30E,30F,30G,32AA,32A,32B,32C,32D,32DD,32E,70A,32F,70B,32G,70C,34AA,70D,70E,34A,34B,34C,34D,34DD,34E,75A,34F,75B,34G,75C,75D,75E,75F,36A,36B,36C,36D,36DD,36E,80A,36F,80B,36G,80C,80D,80E,38A,80F,38B,38C,38D,38DD,85A,38E,85B,38F,85C,85D,85E,85F,40B,40C,40D,40DD,90A,40E,40F,90B,90C,90D,90E,90F,95A,95B,95C,95D,95E,95F,100B,100C,32/30,34/30,36/30,38/30,40/30,42/30,34/32,36/32,38/32,40/32,42/32,34/34,36/34,38/34,40/2XL,42/3XL,44/4XL,46/5XL,48/6XL,50/7XL,52/8XL,54/9XL,56/10XL,58/11XL,5XL/6XL,32/S,34/M,36/L,38/XL,38G,100D,40G,100E,100F,6-8 (39-42),60/12XL,XL/2XL" | downcase | split: "," %}
+
+{% for option in product.options_with_values %}
+  <div class="row js">
+    {%- capture option_id -%}{{ section.id }}-{{ option.name | handle }}{%- endcapture -%}
+    {%- assign swatches = false -%}
+
+    {%- if settings.swatch_enabled_productpage and settings.swatch_option_name contains option.name -%}
+      {%- assign swatches = true -%}
+    {%- endif -%}
+
+    {%- if swatches and settings.swatch_method == 'image' -%}
+      <style>
+        {%- assign option_index0 = forloop.index0 -%}
+        {%- for value in option.values -%}
+          {%- for variant in product.variants -%}
+            {%- if variant.options[option_index0] == value -%}
+              .product-detail[data-product-id="{{ product.id }}"] [data-swatch="{{ value | downcase | replace: '"', '' }}"]::before { --swatch-background-image: url({{ variant.featured_media.preview_image | img_url: '80x80', crop: settings.swatch_crop_align  }}) }
+              {%- break -%}
+            {%- endif -%}
+          {%- endfor -%}
+        {%- endfor -%}
+      </style>
+    {%- endif -%}
+
+    {%- if settings.variant_style == 'dropdown' -%}
+      <div class="option-selector" data-single-option-selector data-selector-type="dropdown" data-index="option{{ option.position }}">
+        {% render 'custom-select',
+          id: option_id,
+          label: option.name,
+          label_inside: true,
+          option_values: option.values,
+          selected_value: option.selected_value,
+          swatches: swatches
+        %}
+      </div>
+    {%- else -%}
+      <fieldset class="option-selector" data-single-option-selector data-selector-type="listed" data-index="option{{ option.position }}">
+        <legend class="label">
+          {{- option.name -}}{% if swatches %} - <span class="js-option-title">{{ option.selected_value }}</span>{% endif %}
+        </legend>
+        <div class="option-selector__btns">
+          {%- if option.position == 2 -%}
+            {% comment %} Sort size values by predetermined order {% endcomment %}
+            {% comment %} 
+              IMPORTANT!
+              This only works when the 'size' selector is the second selector in the list
+              If the 'size' selector needs to be moved to a different position, this
+              code will need to be modified
+            {% endcomment %}
+            {% for size in size_order %}
+              {% for value in option.values %}
+                {% assign value_lower = value | downcase %}
+                {% if value_lower == size %}
+                  <input class="opt-btn js-option" type="radio" name="{{ option_id }}-option" id="{{ option_id }}-opt-{{ forloop.index0 }}" value="{{ value | escape }}"{% if option.selected_value == value %} checked{% endif %}>
+                  <label class="opt-label{% if swatches == true %}{% if settings.swatch_method == 'image' %} opt-swatch--image{% else %} opt-swatch--dot{% endif %}{% endif %}"
+                  {% if swatches == true %} data-swatch="{{ value | downcase | replace: '"', ''}}"{% endif %} for="{{ option_id }}-opt-{{ forloop.index0 }}">{{ value }}</label>
+                  {% break %}
+                {% endif %}
+              {% endfor %}
+            {% endfor %}
+          {%- else -%}
+            {% comment %} Display all other selectors in their organic order {% endcomment %}
+            {%- for value in option.values -%}
+              <input class="opt-btn js-option" type="radio" name="{{ option_id }}-option" id="{{ option_id }}-opt-{{ forloop.index0 }}" value="{{ value | escape }}"{% if option.selected_value == value %} checked{% endif %}>
+              <label class="opt-label{% if swatches == true %}{% if settings.swatch_method == 'image' %} opt-swatch--image{% else %} opt-swatch--dot{% endif %}{% endif %}"
+              {% if swatches == true %} data-swatch="{{ value | downcase | replace: '"', ''}}"{% endif %} for="{{ option_id }}-opt-{{ forloop.index0 }}">{{ value }}</label>
+            {%- endfor -%}
+          {%- endif -%}
+        </div>
+      </fieldset>
+    {%- endif -%}
+    
+    {%- if show_size_chart == true and option.name == block.settings.size_chart_option_name -%}
+      <a href="{{ size_chart_page.url }}" class="standard-link tiny-text size-chart-link js-size-chart-open">{{ 'products.product.show_size_chart' | t }}</a>
+    {%- endif -%}
+  </div>
+{% endfor %}
