@@ -1,0 +1,663 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "background_video_8Unj9Y": {
+      "type": "background-video",
+      "custom_css": [
+        ".overlay {text-align: left; top: 95%; left: 22%;}",
+        "h2 {text-transform: uppercase;}",
+        ".overlay-text {font-size: 20px; margin: 2px;}"
+      ],
+      "settings": {
+        "video_shopify": "shopify://files/videos/SS25_LIFESTYLE_VIDEO_94231-0044_003-1920.mp4",
+        "video_external": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
+        "height_desktop": 600,
+        "height_mobile": 500,
+        "color_overlay_bg": "#ffffff",
+        "overlay_opacity": 0,
+        "color_overlay_text": "#ffffff",
+        "overlay_title": "Men's Ultrasoft Cooling",
+        "overlay_text": "Stay cool and comfortable while you recharge",
+        "overlay_url_text_1": "Shop Ultrasoft Cooling Collection",
+        "overlay_url_1": "shopify://collections/jockey-ultrasoft-cooling",
+        "overlay_url_text_2": "",
+        "overlay_url_2": "",
+        "overlay_url_style": "button_2",
+        "enlarge_title": false,
+        "enlarge_text": false,
+        "overlay_position_x": 50,
+        "overlay_position_y": 70,
+        "mobile_text_below": false,
+        "color_label_background": "#ffffff",
+        "color_label_text": "#333333",
+        "show_chevron": true,
+        "product_id_1": "",
+        "chevron_position_1": "right",
+        "label_position_x_1": 20,
+        "label_position_y_1": 30,
+        "product_id_2": "",
+        "chevron_position_2": "right",
+        "label_position_x_2": 80,
+        "label_position_y_2": 50
+      }
+    },
+    "rich_text_iy9Gg9": {
+      "type": "rich-text",
+      "custom_css": [
+        ".rich-text-section {margin-bottom: -4vw;}"
+      ],
+      "settings": {
+        "title": "See What's New This Summer",
+        "text": "",
+        "button_label": "",
+        "button_link": "",
+        "url_style": "button_1",
+        "enlarge_title": true,
+        "enlarge_text": false,
+        "full_width": false,
+        "color_title": "#333333",
+        "color_text": "#333333",
+        "color_bg": "#ffffff",
+        "gradient_bg": ""
+      }
+    },
+    "image_gallery_Fn3tyz": {
+      "type": "image-gallery",
+      "blocks": {
+        "image_MehKpD": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/2505-new-section-men_e5db1b5c-5256-4bd9-b0cc-fcc0caa38c91.jpg",
+            "enlarge_image": false,
+            "link": "https://www.jockey.co.uk/collections/mens-new-arrivals",
+            "title": "Men's New Arrivals",
+            "text": "",
+            "button_label": "Shop Now",
+            "overlay_position": "bottom-left"
+          }
+        },
+        "image_G7jTri": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/2505-new-section-women_4d07d847-0bfa-45d6-829b-5816a8132058.jpg",
+            "enlarge_image": false,
+            "link": "https://www.jockey.co.uk/collections/womens-new-arrivals",
+            "title": "Women's New Arrivals",
+            "text": "",
+            "button_label": "Shop Now",
+            "overlay_position": "bottom-left"
+          }
+        }
+      },
+      "block_order": [
+        "image_MehKpD",
+        "image_G7jTri"
+      ],
+      "custom_css": [
+        "h3 {font-weight: bold !important; font-size: 24px;}",
+        ".overlay__content {color: #ffffff; align-items: start; text-align: left; justify-content: left; display: grid;}"
+      ],
+      "settings": {
+        "grid": 3,
+        "image_height": 700,
+        "image_height_mobile": 500,
+        "enable_margin": true,
+        "enable_carousel": true,
+        "overlay_style": "no_background",
+        "color_overlay_bg": "#ffffff",
+        "overlay_opacity": 0,
+        "color_overlay_text": "#333333",
+        "overlay_url_style": "button_2"
+      }
+    },
+    "rich-text": {
+      "type": "rich-text",
+      "custom_css": [
+        ".rich-text-section {padding-left: 30px; padding-right: 30px; padding-top: 18px; padding-bottom: 0px;}"
+      ],
+      "settings": {
+        "title": "Shop Summer Favorites",
+        "text": "",
+        "button_label": "",
+        "button_link": "",
+        "url_style": "button_1",
+        "enlarge_title": false,
+        "enlarge_text": false,
+        "full_width": false,
+        "color_title": "#333333",
+        "color_text": "#333333",
+        "color_bg": "#ffffff",
+        "gradient_bg": ""
+      }
+    },
+    "image_gallery_rL8hEB": {
+      "type": "image-gallery",
+      "blocks": {
+        "image_kUBnBY": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/2505_summershop-boxers_700x900_3b5d0ff7-c557-48aa-9506-45d198e578b5.jpg",
+            "enlarge_image": false,
+            "link": "https://www.jockey.co.uk/collections/boxers",
+            "title": "Boxers",
+            "text": "",
+            "button_label": "",
+            "overlay_position": "bottom-center"
+          }
+        },
+        "image_H3AVfr": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/2505_summershop-lace_700x900_b282a5e0-13ee-45d3-83fa-22c221d760d6.jpg",
+            "enlarge_image": false,
+            "link": "shopify://collections/jockey-soft-stretch-lace",
+            "title": "soft stretch lace",
+            "text": "",
+            "button_label": "",
+            "overlay_position": "bottom-center"
+          }
+        },
+        "image_NRenb4": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/2505_summershop-best-700x900.jpg",
+            "enlarge_image": false,
+            "link": "https://www.jockey.co.uk/collections/100-cotton",
+            "title": "100% Cotton",
+            "text": "",
+            "button_label": "",
+            "overlay_position": "bottom-center"
+          }
+        },
+        "image_Yztdmj": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/2505_summershop-bras700x900_9f3849bb-a52f-4792-90ae-94be4875b723.jpg",
+            "enlarge_image": false,
+            "link": "https://www.jockey.co.uk/collections/bras-and-bralettes",
+            "title": "Bras",
+            "text": "",
+            "button_label": "",
+            "overlay_position": "bottom-center"
+          }
+        }
+      },
+      "block_order": [
+        "image_kUBnBY",
+        "image_H3AVfr",
+        "image_NRenb4",
+        "image_Yztdmj"
+      ],
+      "custom_css": [
+        "h3 {font-size: 24px !important; text-transform: uppercase;}"
+      ],
+      "settings": {
+        "grid": 4,
+        "image_height": 700,
+        "image_height_mobile": 700,
+        "enable_margin": true,
+        "enable_carousel": true,
+        "overlay_style": "no_background",
+        "color_overlay_bg": "#ffffff",
+        "overlay_opacity": 80,
+        "color_overlay_text": "#ffffff",
+        "overlay_url_style": "button_1"
+      }
+    },
+    "rich_text_Nf9F9e": {
+      "type": "rich-text",
+      "custom_css": [
+        ".rich-text-section {padding-left: 30px; padding-right: 30px; padding-top: 0px; padding-bottom: 12px;}"
+      ],
+      "settings": {
+        "title": "",
+        "text": "",
+        "button_label": "Shop Summer Favorites",
+        "button_link": "https://www.jockey.co.uk/collections/jockey-new-arrivals",
+        "url_style": "button_1",
+        "enlarge_title": false,
+        "enlarge_text": false,
+        "full_width": false,
+        "color_title": "#333333",
+        "color_text": "#333333",
+        "color_bg": "#ffffff",
+        "gradient_bg": ""
+      }
+    },
+    "image_with_text_overlay_GN6EKV": {
+      "type": "image-with-text-overlay",
+      "custom_css": [
+        ".overlay {top: 60%; left: 23%;}",
+        "h2 {text-transform: uppercase;}",
+        ".overlay-text {font-size: 20px; margin: 2px;}",
+        ".overlay_content {color: #ffffff; align-items: start !important; text-align: left !important; justify-content: left !important; display: grid !important;}",
+        ".container {display: block;}",
+        "@media (max-width: 768px) {.container {display: none !important; }}"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/skimmies-desktop-banner_17f88353-dbf8-43d4-9654-a0268148e966.jpg",
+        "image_link": "shopify://collections/skimmies",
+        "height": "adapt",
+        "height_desktop": 600,
+        "height_mobile": 500,
+        "color_overlay_bg": "#ffffff",
+        "overlay_opacity": 0,
+        "color_overlay_text": "#1a1a1a",
+        "text_alignment": "align-left",
+        "overlay_position_x": 50,
+        "overlay_position_y": 70,
+        "mobile_text_below": true,
+        "overlay_title": "Skimmies® Cooling",
+        "enlarge_title": false,
+        "overlay_title_width": 100,
+        "styled_words": "",
+        "words_style": "stencil",
+        "highlight_words_top": 11,
+        "highlight_color": "#ffffff",
+        "styled_word_color": "#b5e0fa",
+        "overlay_text": "Cool, Confident, and Seamfree™ Slip into lightweight, chafe-free comfort",
+        "enlarge_text": false,
+        "overlay_url_text_1": "Shop Skimmies®",
+        "overlay_url_1": "shopify://collections/skimmies",
+        "overlay_url_text_2": "",
+        "overlay_url_2": "https://www.jockey.co.uk/collections/jockey-soft-stretch-lace",
+        "overlay_url_style": "button_2",
+        "color_label_background": "#ffffff",
+        "color_label_text": "#333333",
+        "show_chevron": true,
+        "product_id_1": "",
+        "chevron_position_1": "right",
+        "label_position_x_1": 20,
+        "label_position_y_1": 30,
+        "product_id_2": "",
+        "chevron_position_2": "right",
+        "label_position_x_2": 80,
+        "label_position_y_2": 50
+      }
+    },
+    "image_with_text_overlay_hjp6dR": {
+      "type": "image-with-text-overlay",
+      "disabled": true,
+      "custom_css": [
+        ".container {display: none;}",
+        "@media (max-width: 768px) {.container {display: block !important; }}"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/soft-stretch-lace-banner-mobile-update-4_11b596bc-f48d-4a7d-a473-f968eccc558e.jpg",
+        "image_link": "https://www.jockey.co.uk/collections/jockey-soft-stretch-lace",
+        "height": "adapt",
+        "height_desktop": 600,
+        "height_mobile": 660,
+        "color_overlay_bg": "#1d2236",
+        "overlay_opacity": 100,
+        "color_overlay_text": "#ffffff",
+        "text_alignment": "align-left",
+        "overlay_position_x": 32,
+        "overlay_position_y": 70,
+        "mobile_text_below": true,
+        "overlay_title": "New Soft Stretch Lace Collection",
+        "enlarge_title": false,
+        "overlay_title_width": 100,
+        "styled_words": "",
+        "words_style": "stencil",
+        "highlight_words_top": 12,
+        "highlight_color": "#ffffff",
+        "styled_word_color": "#b5e0fa",
+        "overlay_text": "Enjoy every moment in breathable and soft underwear and bralettes",
+        "enlarge_text": false,
+        "overlay_url_text_1": "SHOP SOFT STRETCH LACE",
+        "overlay_url_1": "",
+        "overlay_url_text_2": "",
+        "overlay_url_2": "https://www.jockey.co.uk/collections/jockey-soft-stretch-lace",
+        "overlay_url_style": "button_2",
+        "color_label_background": "#ffffff",
+        "color_label_text": "#333333",
+        "show_chevron": true,
+        "product_id_1": "",
+        "chevron_position_1": "right",
+        "label_position_x_1": 20,
+        "label_position_y_1": 30,
+        "product_id_2": "",
+        "chevron_position_2": "right",
+        "label_position_x_2": 80,
+        "label_position_y_2": 50
+      }
+    },
+    "image_with_text_overlay_hzFYid": {
+      "type": "image-with-text-overlay",
+      "custom_css": [
+        ".container {display: none;}",
+        "@media (max-width: 768px) {.container {display: block !important; } .overlay-text {font-size: 20px; margin: 2px; }}"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/skimmies-mobile-banner_ae450400-f071-4e7e-81fc-b43c1cbce4b4.gif",
+        "image_link": "shopify://collections/skimmies",
+        "height": "adapt",
+        "height_desktop": 600,
+        "height_mobile": 500,
+        "color_overlay_bg": "#ffffff",
+        "overlay_opacity": 0,
+        "color_overlay_text": "#ffffff",
+        "text_alignment": "align-left",
+        "overlay_position_x": 26,
+        "overlay_position_y": 86,
+        "mobile_text_below": false,
+        "overlay_title": "Skimmies® Cooling",
+        "enlarge_title": false,
+        "overlay_title_width": 100,
+        "styled_words": "",
+        "words_style": "stencil",
+        "highlight_words_top": 10,
+        "highlight_color": "#ffffff",
+        "styled_word_color": "#b5e0fa",
+        "overlay_text": "Cool, Confident, and Seamfree™ Slip into lightweight, chafe-free comfort",
+        "enlarge_text": false,
+        "overlay_url_text_1": "Shop Skimmies®",
+        "overlay_url_1": "shopify://collections/skimmies",
+        "overlay_url_text_2": "",
+        "overlay_url_2": "shopify://collections/skimmies",
+        "overlay_url_style": "button_2",
+        "color_label_background": "#ffffff",
+        "color_label_text": "#333333",
+        "show_chevron": true,
+        "product_id_1": "",
+        "chevron_position_1": "right",
+        "label_position_x_1": 20,
+        "label_position_y_1": 30,
+        "product_id_2": "",
+        "chevron_position_2": "right",
+        "label_position_x_2": 80,
+        "label_position_y_2": 50
+      }
+    },
+    "image_with_text_overlay_jAAMxK": {
+      "type": "image-with-text-overlay",
+      "disabled": true,
+      "custom_css": [
+        ".container {display: none;}",
+        "@media (max-width: 768px) {h2 {font-size: 20px; margin-bottom: 2px; display: contents; } .overlay {top: 100%; left: 50%; } .container {display: block !important; } .btn {font-size: 12px; } .overlay a {margin: 4px 7.5px 0; } .overlay-text {margin: 0px 0; font-size: 15px; }}"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/soft-stretch-lace-banner-mobile.jpg",
+        "image_link": "https://www.jockey.co.uk/collections/jockey-soft-stretch-lace",
+        "height": "adapt",
+        "height_desktop": 600,
+        "height_mobile": 500,
+        "color_overlay_bg": "#ffffff",
+        "overlay_opacity": 0,
+        "color_overlay_text": "#ffffff",
+        "text_alignment": "center",
+        "overlay_position_x": 50,
+        "overlay_position_y": 70,
+        "mobile_text_below": false,
+        "overlay_title": "New Soft Stretch Lace Collection",
+        "enlarge_title": false,
+        "overlay_title_width": 100,
+        "styled_words": "",
+        "words_style": "stencil",
+        "highlight_words_top": 10,
+        "highlight_color": "#ffffff",
+        "styled_word_color": "#b5e0fa",
+        "overlay_text": "",
+        "enlarge_text": false,
+        "overlay_url_text_1": "SHOP SOFT STRETCH LACE",
+        "overlay_url_1": "https://www.jockey.co.uk/collections/jockey-soft-stretch-lace",
+        "overlay_url_text_2": "",
+        "overlay_url_2": "shopify://collections/jockey-soft-stretch-lace",
+        "overlay_url_style": "button_2",
+        "color_label_background": "#ffffff",
+        "color_label_text": "#333333",
+        "show_chevron": true,
+        "product_id_1": "",
+        "chevron_position_1": "right",
+        "label_position_x_1": 20,
+        "label_position_y_1": 30,
+        "product_id_2": "",
+        "chevron_position_2": "right",
+        "label_position_x_2": 34,
+        "label_position_y_2": 0
+      }
+    },
+    "rich_text_CN7bM8": {
+      "type": "rich-text",
+      "custom_css": [
+        "h2 {text-align: left;}",
+        ".rich-text-section {padding-top: 18px; padding-bottom: 0px;}",
+        ".reading-width {max-width: 100%; padding-left: 0px; padding-right: 0px;}",
+        "@media (max-width: 992px) {h2 {text-align: center; }}"
+      ],
+      "settings": {
+        "title": "Featured",
+        "text": "",
+        "button_label": "",
+        "button_link": "",
+        "url_style": "button_1",
+        "enlarge_title": false,
+        "enlarge_text": false,
+        "full_width": false,
+        "color_title": "#333333",
+        "color_text": "#333333",
+        "color_bg": "#ffffff",
+        "gradient_bg": ""
+      }
+    },
+    "image_gallery_Lphx6t": {
+      "type": "image-gallery",
+      "blocks": {
+        "image_GTK8iH": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/2505-chafe-proof.jpg",
+            "enlarge_image": false,
+            "link": "https://www.jockey.co.uk/collections/chafe-proof-solutions",
+            "title": "",
+            "text": "<p>Chafe Proof Solutions</p>",
+            "button_label": "Shop Chafe Proof Collection",
+            "overlay_position": "bottom-left"
+          }
+        },
+        "image_HfdRHM": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/2505-undershirts.jpg",
+            "enlarge_image": false,
+            "link": "shopify://collections/jockey-mens-t-shirts",
+            "title": "",
+            "text": "<p>Undershirts & Iconic Tees</p>",
+            "button_label": "Shop Undershirt Collection",
+            "overlay_position": "bottom-left"
+          }
+        },
+        "image_JwcRPc": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/2505-w-sleep.jpg",
+            "enlarge_image": false,
+            "link": "https://www.jockey.co.uk/collections/womens-nightwear-lounge",
+            "title": "",
+            "text": "<p>Women's Fashionable Shirts and Lounge dresses</p>",
+            "button_label": "Shop Loungewear Collection",
+            "overlay_position": "bottom-left"
+          }
+        },
+        "image_fa6HNn": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/2505-wf_0ec3053c-9ce1-41c3-905b-e9336a6fd87a.gif",
+            "enlarge_image": false,
+            "link": "https://www.jockey.co.uk/collections/jockey-worry-free-collection",
+            "title": "",
+            "text": "<p>worry free solutions</p>",
+            "button_label": "Shop Worry Free Collection",
+            "overlay_position": "bottom-left"
+          }
+        }
+      },
+      "block_order": [
+        "image_GTK8iH",
+        "image_HfdRHM",
+        "image_JwcRPc",
+        "image_fa6HNn"
+      ],
+      "custom_css": [
+        ".overlay-text {font-weight: bold; font-size: 25px; text-transform: uppercase; line-height: 30px;}",
+        "p {margin: 4px 0;}",
+        ".overlay__content {color: #ffffff; align-items: start; text-align: left; justify-content: left; display: grid;}"
+      ],
+      "settings": {
+        "grid": 2,
+        "image_height": 840,
+        "image_height_mobile": 350,
+        "enable_margin": true,
+        "enable_carousel": true,
+        "overlay_style": "no_background",
+        "color_overlay_bg": "#ffffff",
+        "overlay_opacity": 80,
+        "color_overlay_text": "#333333",
+        "overlay_url_style": "button_2"
+      }
+    },
+    "logo_list_TaJ4DN": {
+      "type": "logo-list",
+      "blocks": {
+        "logo_eyeEdC": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/2505-m-uw-category_280x_5177565a-03da-438a-9d98-99f2ce87ee38.jpg",
+            "image_width": 280,
+            "link": "shopify://collections/mens-underwear",
+            "title": "Underwear"
+          }
+        },
+        "logo_CczexN": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/2505-m-tshirt-category_280x_8cf3eb11-f77a-4f44-a14e-44566d7cf612.jpg",
+            "image_width": 280,
+            "link": "shopify://collections/shirts",
+            "title": "T-Shirts"
+          }
+        },
+        "logo_A9Ph76": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/2505-m-sleep-category_280x_91f3de4d-c247-4a58-8430-facca5a6908b.jpg",
+            "image_width": 280,
+            "link": "shopify://collections/mens-nightwear-loungewear",
+            "title": "Nightwear"
+          }
+        },
+        "logo_6kR9QU": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/2505-m-sale-category_280x_811d6a01-31ba-42e0-9527-6d441e595aca.jpg",
+            "image_width": 280,
+            "link": "shopify://collections/mens-sale",
+            "title": "Sale"
+          }
+        }
+      },
+      "block_order": [
+        "logo_eyeEdC",
+        "logo_CczexN",
+        "logo_A9Ph76",
+        "logo_6kR9QU"
+      ],
+      "custom_css": [
+        ".logo-list__logo-text {text-transform: uppercase;}"
+      ],
+      "settings": {
+        "title": "Top Categories for Men",
+        "color_bg": "#ffffff",
+        "color_title": "#353d43",
+        "color_text": "#353d43",
+        "enlarge_title": false,
+        "enlarge_text": false,
+        "image_opacity": 100
+      }
+    },
+    "logo_list_Fpcjat": {
+      "type": "logo-list",
+      "blocks": {
+        "logo_bhAfFM": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/2505-w-bras-category_280x_10a35d96-f359-4407-8b64-7a155fcd817d.jpg",
+            "image_width": 280,
+            "link": "shopify://collections/bras-and-bralettes",
+            "title": "Bras & Bralettes"
+          }
+        },
+        "logo_MzGpFW": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/2505-w-uw-category_280x_cacdbe87-6eb0-464f-ad39-8908949ae29a.jpg",
+            "image_width": 280,
+            "link": "shopify://collections/womens-underwear",
+            "title": "Underwear"
+          }
+        },
+        "logo_YxMJK9": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/2505-w-sleep-category_280x_064c9314-2229-44db-8090-5a3b971e0269.jpg",
+            "image_width": 280,
+            "link": "shopify://collections/womens-nightwear-lounge",
+            "title": "Sleep & Lounge"
+          }
+        },
+        "logo_Fjy6Am": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/2505-w-sale-category_280x_ee87556b-c3a5-4d5c-92a7-561d94053a10.jpg",
+            "image_width": 280,
+            "link": "shopify://collections/womens-sale",
+            "title": "Sale"
+          }
+        }
+      },
+      "block_order": [
+        "logo_bhAfFM",
+        "logo_MzGpFW",
+        "logo_YxMJK9",
+        "logo_Fjy6Am"
+      ],
+      "custom_css": [
+        ".logo-list__logo-text {text-transform: uppercase;}"
+      ],
+      "settings": {
+        "title": "Top Categories for Women",
+        "color_bg": "#ffffff",
+        "color_title": "#353d43",
+        "color_text": "#353d43",
+        "enlarge_title": false,
+        "enlarge_text": false,
+        "image_opacity": 100
+      }
+    }
+  },
+  "order": [
+    "background_video_8Unj9Y",
+    "rich_text_iy9Gg9",
+    "image_gallery_Fn3tyz",
+    "rich-text",
+    "image_gallery_rL8hEB",
+    "rich_text_Nf9F9e",
+    "image_with_text_overlay_GN6EKV",
+    "image_with_text_overlay_hjp6dR",
+    "image_with_text_overlay_hzFYid",
+    "image_with_text_overlay_jAAMxK",
+    "rich_text_CN7bM8",
+    "image_gallery_Lphx6t",
+    "logo_list_TaJ4DN",
+    "logo_list_Fpcjat"
+  ]
+}
