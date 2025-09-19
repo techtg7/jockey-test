@@ -333,6 +333,7 @@
         "@media (max-width: 768px) {.container {display: block !important; } .overlay-text {font-size: 20px; margin: 2px; }}"
       ],
       "settings": {
+        "image": "shopify://shop_images/skimmies-mobile-banner_720x_d82c25f8-8fd2-4367-8e35-44101c7fa40c.webp",
         "image_link": "shopify://collections/skimmies",
         "height": "adapt",
         "height_desktop": 600,
@@ -448,6 +449,7 @@
         "image_GTK8iH": {
           "type": "image",
           "settings": {
+            "image": "shopify://shop_images/2505-chafe-proof.webp",
             "enlarge_image": false,
             "link": "https://www.jockey.co.uk/collections/chafe-proof-solutions",
             "title": "",
