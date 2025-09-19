@@ -27,8 +27,8 @@
         "@media only screen and (max-width: 939.98px) {.utils .store-logo.store-logo-mobile--inline {max-width: 110px; margin: 0 auto; } .burger-icon {margin-right: 66px; }}"
       ],
       "settings": {
-        "logo": "shopify://shop_images/Jockey_Logo_LAB_JOCKEY-BLUE_update.png",
-        "logo_width": 235,
+        "logo": "shopify://shop_images/Jockey_Logo_LAB_JOCKEY-BLUE_update_470x_1.avif",
+        "logo_width": 110,
         "desktop_layout": "center",
         "show_search_bar_desktop": true,
         "show_search_bar_mobile": true,

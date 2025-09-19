@@ -74,8 +74,9 @@
         "image_MehKpD": {
           "type": "image",
           "settings": {
+            "image": "shopify://shop_images/2505-new-section-men_800x_92c78833-37fe-469b-b328-b093e2e0d150.webp",
             "enlarge_image": false,
-            "link": "https://www.jockey.co.uk/collections/mens-new-arrivals",
+            "link": "shopify://collections/jockey®-mens-new-arrivals",
             "title": "Men's New Arrivals",
             "text": "",
             "button_label": "Shop Now",
