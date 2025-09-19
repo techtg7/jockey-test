@@ -143,6 +143,7 @@
         "image_kUBnBY": {
           "type": "image",
           "settings": {
+            "image": "shopify://shop_images/2505_summershop-boxers_700x900_540x_58aa8f7a-a9d1-497b-9d5e-59f6f6fe5584.webp",
             "enlarge_image": false,
             "link": "https://www.jockey.co.uk/collections/boxers",
             "title": "Boxers",
@@ -176,6 +177,7 @@
         "image_Yztdmj": {
           "type": "image",
           "settings": {
+            "image": "shopify://shop_images/2505_summershop-lace_700x900_540x_efb01703-df6f-4030-9ef6-2abb512d67a8.webp",
             "enlarge_image": false,
             "link": "https://www.jockey.co.uk/collections/bras-and-bralettes",
             "title": "Bras",
