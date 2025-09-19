@@ -126,22 +126,7 @@
             </ul>
           {%- endif -%}
         </div>
-
-        <div class="page-footer__end">
-
-          <div>
-            <small class="copyright-text">
-              {{ 'layout.footer.copyright' | t }} &copy; {{ 'now' | date: "%Y" }}
-              <a href="{{ routes.root_url }}">{{ shop.name }}</a>
-              {% if section.settings.show_powered_by %}
-                {{ powered_by_link }}
-              {% endif %}
-            </small>
-          </div>
-        <div>
-           <img src="//www.jockey.co.uk/cdn/shop/files/Jockey_Logo_LAB_JOCKEY-BLUE_update.png?v=1711556420&amp;width=300" alt="" srcset="//www.jockey.co.uk/cdn/shop/files/Jockey_Logo_LAB_JOCKEY-BLUE_update.png?v=1711556420&amp;width=300 300w" width="300" height="111">
-        </div>
-           <ul class="small-nav"><li class="small-nav__item">
+        <ul class="small-nav"><li class="small-nav__item">
                   <a class="small-nav__link" href="/pages/our-story">Our Story</a>
                 </li><li class="small-nav__item">
                   <a class="small-nav__link" href="/pages/terms-of-use">Terms of Use</a>
@@ -162,6 +147,20 @@
                 </li><li class="small-nav__item">
                   <a class="small-nav__link" href="/pages/forced-labor-and-child-labor-statement">Forced Labor and Child Labor Statement</a>
                 </li></ul>
+        <div class="page-footer__end">
+    
+          <div>
+            <small class="copyright-text">
+              {{ 'layout.footer.copyright' | t }} &copy; {{ 'now' | date: "%Y" }}
+              <a href="{{ routes.root_url }}">{{ shop.name }}</a>
+              {% if section.settings.show_powered_by %}
+                {{ powered_by_link }}
+              {% endif %}
+            </small>
+          </div>
+        <div>
+           <img src="//www.jockey.co.uk/cdn/shop/files/Jockey_Logo_LAB_JOCKEY-BLUE_update.png?v=1711556420&amp;width=300" alt="" srcset="//www.jockey.co.uk/cdn/shop/files/Jockey_Logo_LAB_JOCKEY-BLUE_update.png?v=1711556420&amp;width=300 300w" width="300" height="111">
+        </div>
           <div>
             {%- if section.settings.show_country_selector or section.settings.show_language_selector -%}
               <div class="footer-localization">
