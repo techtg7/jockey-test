@@ -88,7 +88,7 @@
           "settings": {
             "image": "shopify://shop_images/2505-new-section-women_360x_dfe7a27f-865b-4448-8826-ee552eb1b331.webp",
             "enlarge_image": false,
-            "link": "https://www.jockey.co.uk/collections/womens-new-arrivals",
+            "link": "shopify://collections/jockey®-womens-new-arrivals",
             "title": "Women's New Arrivals",
             "text": "",
             "button_label": "Shop Now",
