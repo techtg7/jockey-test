@@ -522,6 +522,7 @@
         "logo_eyeEdC": {
           "type": "logo",
           "settings": {
+            "image": "shopify://shop_images/2505-m-uw-category_280x_560x_e04cfe18-4508-4a8f-a06e-5aea0d7661f8.jpg",
             "image_width": 280,
             "link": "shopify://collections/mens-underwear",
             "title": "Underwear"
@@ -530,6 +531,7 @@
         "logo_CczexN": {
           "type": "logo",
           "settings": {
+            "image": "shopify://shop_images/2505-m-tshirt-category_280x_560x_e5d5615d-2bd3-4078-ab39-efb31ae92f74.webp",
             "image_width": 280,
             "link": "shopify://collections/shirts",
             "title": "T-Shirts"
@@ -538,6 +540,7 @@
         "logo_A9Ph76": {
           "type": "logo",
           "settings": {
+            "image": "shopify://shop_images/2505-m-sleep-category_280x_560x_751eebf2-68ec-45d5-be0b-ddc0bf8862cf.webp",
             "image_width": 280,
             "link": "shopify://collections/mens-nightwear-loungewear",
             "title": "Nightwear"
@@ -546,6 +549,7 @@
         "logo_6kR9QU": {
           "type": "logo",
           "settings": {
+            "image": "shopify://shop_images/2505-m-sale-category_280x_560x_187e1c4b-98fd-4860-8c12-3b846bb9dded.webp",
             "image_width": 280,
             "link": "shopify://collections/mens-sale",
             "title": "Sale"
@@ -577,6 +581,7 @@
         "logo_bhAfFM": {
           "type": "logo",
           "settings": {
+            "image": "shopify://shop_images/2505-w-bras-category_280x_560x_64cac8c3-7315-404b-9026-9ef8d21604b1.webp",
             "image_width": 280,
             "link": "shopify://collections/bras-and-bralettes",
             "title": "Bras & Bralettes"
@@ -585,6 +590,7 @@
         "logo_MzGpFW": {
           "type": "logo",
           "settings": {
+            "image": "shopify://shop_images/2505-w-uw-category_280x_560x_db5fd313-9da9-4cce-94d6-18e27966fcb8.webp",
             "image_width": 280,
             "link": "shopify://collections/womens-underwear",
             "title": "Underwear"
@@ -593,6 +599,7 @@
         "logo_YxMJK9": {
           "type": "logo",
           "settings": {
+            "image": "shopify://shop_images/2505-w-sleep-category_280x_560x_8449f9a5-366f-417f-928c-00aa665e9345.webp",
             "image_width": 280,
             "link": "shopify://collections/womens-nightwear-lounge",
             "title": "Sleep & Lounge"
@@ -601,6 +608,7 @@
         "logo_Fjy6Am": {
           "type": "logo",
           "settings": {
+            "image": "shopify://shop_images/2505-w-sale-category_280x_560x_a174d4c9-2541-45f0-a268-e37ff00e1ebe.webp",
             "image_width": 280,
             "link": "shopify://collections/womens-sale",
             "title": "Sale"
