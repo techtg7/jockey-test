@@ -464,6 +464,7 @@
         "image_HfdRHM": {
           "type": "image",
           "settings": {
+            "image": "shopify://shop_images/2505-undershirts_720x_de4789c5-59d1-4530-bf15-bd083c3482a9.webp",
             "enlarge_image": false,
             "link": "shopify://collections/jockey-mens-t-shirts",
             "title": "",
@@ -475,6 +476,7 @@
         "image_JwcRPc": {
           "type": "image",
           "settings": {
+            "image": "shopify://shop_images/2505-w-sleep_720x_39b60ea3-3241-4b28-a9c2-c4f14a31ab7b.webp",
             "enlarge_image": false,
             "link": "https://www.jockey.co.uk/collections/womens-nightwear-lounge",
             "title": "",
@@ -486,6 +488,7 @@
         "image_fa6HNn": {
           "type": "image",
           "settings": {
+            "image": "shopify://shop_images/2505-wf_720x_344e31bf-4b89-4f9a-915c-00a435e85f7d.webp",
             "enlarge_image": false,
             "link": "https://www.jockey.co.uk/collections/jockey-worry-free-collection",
             "title": "",
