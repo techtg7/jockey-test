@@ -155,6 +155,7 @@
         "image_H3AVfr": {
           "type": "image",
           "settings": {
+            "image": "shopify://shop_images/2505_summershop-lace_700x900_540x_efb01703-df6f-4030-9ef6-2abb512d67a8.webp",
             "enlarge_image": false,
             "link": "shopify://collections/jockey-soft-stretch-lace",
             "title": "soft stretch lace",
@@ -166,6 +167,7 @@
         "image_NRenb4": {
           "type": "image",
           "settings": {
+            "image": "shopify://shop_images/2505_summershop-best-700x900.webp",
             "enlarge_image": false,
             "link": "https://www.jockey.co.uk/collections/100-cotton",
             "title": "100% Cotton",
@@ -177,7 +179,7 @@
         "image_Yztdmj": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/2505_summershop-lace_700x900_540x_efb01703-df6f-4030-9ef6-2abb512d67a8.webp",
+            "image": "shopify://shop_images/2505_summershop-bras700x900_9f3849bb-a52f-4792-90ae-94be4875b723.webp",
             "enlarge_image": false,
             "link": "https://www.jockey.co.uk/collections/bras-and-bralettes",
             "title": "Bras",
