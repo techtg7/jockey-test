@@ -242,7 +242,7 @@
         "@media (max-width: 768px) {.container {display: none !important; }}"
       ],
       "settings": {
-        "image": "shopify://shop_images/skimmies-mobile-banner_720x_4cb0b5c1-c902-4fee-8141-1c859c21e361.webp",
+        "image": "shopify://shop_images/skimmies-desktop-banner_720x_33d08255-32bf-4201-89e8-6b2a8051c16f.webp",
         "image_link": "shopify://collections/skimmies",
         "height": "adapt",
         "height_desktop": 680,
