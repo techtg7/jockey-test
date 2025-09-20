@@ -6,14 +6,14 @@
     <!-- Welcome Header -->
     <div class="login-header">
       <h1>Welcome Back</h1>
-      <p>Sign in to your account or create a new one to continue shopping</p>
+      <p>Sign in to your account or join Jockey to start shopping</p>
     </div>
 
-    <!-- Login and Register Container -->
-    <div class="auth-container">
+    <!-- Main Login Section -->
+    <div class="login-container">
       
       <!-- Sign In Section -->
-      <div class="auth-section signin-section">
+      <div class="signin-box">
         <div class="auth-header">
           <h2>Sign In</h2>
         </div>
@@ -107,10 +107,60 @@
         </div>
       </div>
 
-      <!-- Create Account Section -->
-      <div class="auth-section signup-section">
+      <!-- Join Jockey CTA Section -->
+      <div class="join-cta-box">
+        <h2>New to Jockey?</h2>
+        <div class="benefits-preview">
+          <h3>Join and enjoy:</h3>
+          <ul class="benefits-preview-list">
+            <li><span class="icon">💰</span> 10% off all the time</li>
+            <li><span class="icon">🚚</span> Free shipping</li>
+            <li><span class="icon">📦</span> Easy order tracking</li>
+          </ul>
+        </div>
+        
+        <button class="btn btn-success btn-join" id="openJoinModal">
+          Join Jockey
+        </button>
+        
+        <p class="join-note">Plus exclusive access to member-only sales!</p>
+      </div>
+    </div>
+
+    <!-- Guest Checkout -->
+    {% if shop.checkout.guest_login %}
+      <div class="guest-section">
+        <div class="divider-text">
+          <span>Or</span>
+        </div>
+        
+        <div class="guest-box">
+          <h3>Continue as Guest</h3>
+          <p>Shop without creating an account</p>
+          {% form 'guest_login' %}
+            <input type="submit" class="btn btn-outline" value="Continue as Guest">
+          {% endform %}
+        </div>
+      </div>
+    {% endif %}
+
+    <!-- Return Link -->
+    <div class="return-link">
+      <a href="{{ routes.root_url }}">← Return to Store</a>
+    </div>
+
+  </div>
+
+  <!-- Join Jockey Modal Popup -->
+  <div id="joinModal" class="modal-overlay">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>Join Jockey</h2>
+        <button class="modal-close" id="closeModal">&times;</button>
+      </div>
+      
+      <div class="modal-body">
         <div class="benefits-header">
-          <h2>Join Jockey</h2>
           <div class="benefits-box">
             <h3>Benefits include</h3>
             <ul class="benefits-list">
@@ -177,7 +227,7 @@
           </div>
 
           <div class="form-submit">
-            <input type="submit" class="btn btn-success" value="Create Account">
+            <input type="submit" class="btn btn-success btn-fullwidth" value="Create Account">
           </div>
 
           <div class="terms">
@@ -187,35 +237,55 @@
         {% endform %}
       </div>
     </div>
-
-    <!-- Guest Checkout -->
-    {% if shop.checkout.guest_login %}
-      <div class="guest-section">
-        <div class="divider-text">
-          <span>Or</span>
-        </div>
-        
-        <div class="guest-box">
-          <h3>Continue as Guest</h3>
-          <p>Shop without creating an account</p>
-          {% form 'guest_login' %}
-            <input type="submit" class="btn btn-outline" value="Continue as Guest">
-          {% endform %}
-        </div>
-      </div>
-    {% endif %}
-
-    <!-- Return Link -->
-    <div class="return-link">
-      <a href="{{ routes.root_url }}">← Return to Store</a>
-    </div>
-
   </div>
 </div>
 
 <script>
-// Simple vanilla JavaScript - no dependencies
+// Simple vanilla JavaScript for modal and password recovery
 (function() {
+  // Modal functionality
+  var joinModal = document.getElementById('joinModal');
+  var openModalBtn = document.getElementById('openJoinModal');
+  var closeModalBtn = document.getElementById('closeModal');
+
+  // Open modal
+  if (openModalBtn && joinModal) {
+    openModalBtn.onclick = function(e) {
+      e.preventDefault();
+      joinModal.style.display = 'flex';
+      document.body.style.overflow = 'hidden';
+      return false;
+    };
+  }
+
+  // Close modal
+  function closeModal() {
+    if (joinModal) {
+      joinModal.style.display = 'none';
+      document.body.style.overflow = 'auto';
+    }
+  }
+
+  if (closeModalBtn) {
+    closeModalBtn.onclick = closeModal;
+  }
+
+  // Close modal when clicking outside
+  if (joinModal) {
+    joinModal.onclick = function(e) {
+      if (e.target === joinModal) {
+        closeModal();
+      }
+    };
+  }
+
+  // Close modal with Escape key
+  document.onkeydown = function(e) {
+    if (e.key === 'Escape' || e.keyCode === 27) {
+      closeModal();
+    }
+  };
+
   // Password recovery toggle
   var recoverLink = document.getElementById('RecoverPassword');
   var hideRecoverLink = document.getElementById('HideRecoverPasswordLink');
@@ -225,8 +295,8 @@
   if (recoverLink && recoverForm && loginForm) {
     recoverLink.onclick = function(e) {
       e.preventDefault();
-      loginForm.style.display = 'none';
-      recoverForm.style.display = 'block';
+      loginForm.classList.add('hide');
+      recoverForm.classList.remove('hide');
       return false;
     };
   }
@@ -234,8 +304,8 @@
   if (hideRecoverLink && recoverForm && loginForm) {
     hideRecoverLink.onclick = function(e) {
       e.preventDefault();
-      recoverForm.style.display = 'none';
-      loginForm.style.display = 'block';
+      recoverForm.classList.add('hide');
+      loginForm.classList.remove('hide');
       return false;
     };
   }
@@ -246,16 +316,35 @@
   if (resetSuccess && resetSuccessDiv) {
     resetSuccessDiv.classList.remove('hide');
   }
+
+  // Auto-open modal if there are registration errors
+  var modalForm = joinModal ? joinModal.querySelector('form') : null;
+  if (modalForm && modalForm.querySelector('.errors')) {
+    setTimeout(function() {
+      joinModal.style.display = 'flex';
+      document.body.style.overflow = 'hidden';
+    }, 100);
+  }
 })();
 </script>
 
 <style>
 /* Reset and Base */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+}
+
 .login-page {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   line-height: 1.6;
   color: #333;
   padding: 2rem 0;
+  background: #fff;
+  position: relative;
 }
 
 .page-width {
@@ -284,15 +373,16 @@
 }
 
 /* Main Container */
-.auth-container {
+.login-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 3rem;
-  max-width: 1000px;
+  max-width: 900px;
   margin: 0 auto;
 }
 
-.auth-section {
+.signin-box,
+.join-cta-box {
   background: #fff;
   border: 1px solid #e0e0e0;
   border-radius: 8px;
@@ -314,13 +404,146 @@
   margin: 0 0 2rem 0;
 }
 
-/* Benefits */
-.benefits-header h2 {
+/* Join CTA Box */
+.join-cta-box {
+  text-align: center;
+}
+
+.join-cta-box h2 {
   font-size: 1.8rem;
   font-weight: 600;
   margin: 0 0 1.5rem 0;
-  text-align: center;
   color: #333;
+}
+
+.benefits-preview {
+  background: #f8f9ff;
+  border: 1px solid #e6e9ff;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.benefits-preview h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0 0 1rem 0;
+  color: #333;
+}
+
+.benefits-preview-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.benefits-preview-list li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  padding: 0.5rem 0;
+  font-weight: 500;
+  color: #333;
+}
+
+.benefits-preview-list .icon {
+  font-size: 1.2rem;
+}
+
+.btn-join {
+  font-size: 1.1rem;
+  padding: 1rem 2rem;
+  margin-bottom: 1rem;
+}
+
+.join-note {
+  color: #666;
+  font-size: 0.9rem;
+  font-style: italic;
+  margin: 0;
+}
+
+/* Modal Styles */
+.modal-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+.modal-content {
+  background: white;
+  border-radius: 8px;
+  max-width: 500px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  animation: modalSlideIn 0.3s ease-out;
+}
+
+@keyframes modalSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 2rem;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.modal-header h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0;
+  color: #333;
+}
+
+.modal-close {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #999;
+  padding: 0;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: all 0.2s ease;
+}
+
+.modal-close:hover {
+  color: #333;
+  background: #f5f5f5;
+}
+
+.modal-body {
+  padding: 2rem;
+}
+
+/* Benefits in Modal */
+.benefits-header {
+  margin-bottom: 2rem;
 }
 
 .benefits-box {
@@ -328,7 +551,6 @@
   color: white;
   padding: 1.5rem;
   border-radius: 8px;
-  margin-bottom: 2rem;
 }
 
 .benefits-box h3 {
@@ -386,7 +608,6 @@
   font-size: 1rem;
   background: #fafafa;
   transition: all 0.3s ease;
-  box-sizing: border-box;
 }
 
 .input-field:focus {
@@ -462,7 +683,6 @@
 /* Buttons */
 .btn {
   display: inline-block;
-  width: 100%;
   padding: 0.875rem 1.5rem;
   border: 2px solid transparent;
   border-radius: 6px;
@@ -475,6 +695,10 @@
   box-sizing: border-box;
 }
 
+.btn-fullwidth {
+  width: 100%;
+}
+
 .btn-primary {
   background: #007bff;
   color: white;
@@ -484,6 +708,7 @@
 .btn-primary:hover {
   background: #0056b3;
   border-color: #0056b3;
+  transform: translateY(-1px);
 }
 
 .btn-success {
@@ -495,6 +720,7 @@
 .btn-success:hover {
   background: #218838;
   border-color: #218838;
+  transform: translateY(-1px);
 }
 
 .btn-outline {
@@ -614,38 +840,10 @@
   border-bottom: 1px solid #f0f0f0;
 }
 
-/* Utility - Ensure no overlay or modal styles */
+/* Utility */
 .hide {
   display: none !important;
   visibility: hidden !important;
-}
-
-/* Remove any potential overlay elements */
-.login-page::before,
-.login-page::after,
-.page-width::before,
-.page-width::after {
-  display: none !important;
-}
-
-/* Ensure no fixed/absolute positioning conflicts */
-.login-page * {
-  position: static !important;
-}
-
-.login-page .auth-section {
-  position: relative !important;
-}
-
-/* Override any theme modal/popup styles */
-.modal,
-.popup,
-.overlay,
-.backdrop {
-  display: none !important;
-  visibility: hidden !important;
-  opacity: 0 !important;
-  pointer-events: none !important;
 }
 
 /* Responsive */
@@ -654,12 +852,13 @@
     font-size: 2rem;
   }
   
-  .auth-container {
+  .login-container {
     grid-template-columns: 1fr;
     gap: 2rem;
   }
   
-  .auth-section {
+  .signin-box,
+  .join-cta-box {
     padding: 1.5rem;
   }
   
@@ -670,6 +869,15 @@
   
   .benefits-box {
     padding: 1rem;
+  }
+  
+  .modal-content {
+    margin: 1rem;
+    max-height: calc(100vh - 2rem);
+  }
+  
+  .modal-body {
+    padding: 1.5rem;
   }
 }
 
@@ -690,17 +898,26 @@
     font-size: 1.75rem;
   }
   
-  .auth-section {
+  .signin-box,
+  .join-cta-box {
     padding: 1rem;
   }
   
+  .benefits-preview,
   .benefits-box {
     padding: 1rem;
-    margin-bottom: 1.5rem;
   }
   
   .guest-box {
     padding: 1.5rem;
+  }
+  
+  .modal-header {
+    padding: 1rem 1.5rem;
+  }
+  
+  .modal-body {
+    padding: 1rem 1.5rem;
   }
 }
 </style>
