@@ -1,1 +1,669 @@
-{"current":{"color_body_background":"#ffffff","accent_color":"#ffffff","color_body_text":"#1a1a1a","color_body_link":"#223152","color_sale_text":"#cd201a","header_bck_color":"#ffffff","logo_text_color":"#223152","header_text_color":"#223152","main_menu_bck_color":"#ffffff","main_menu_link_color":"#2d353c","mobile_menu_bck_color":"#ffffff","store_messages_bck_color":"#2d353c","footer_text_color":"#1a1a1a","footer_bck_color":"#f2f2f2","primary_btn_background":"#1a1a1a","primary_btn_text":"#ffffff","secondary_btn_background":"#ffffff","secondary_btn_text":"#2d353c","quickbuy_form_background":"#f2f2f2","quickbuy_form_text":"#222222","collection_feature_header_background":"#e9e3e1","type_heading_font":"lato_n7","uppercase_headings":false,"type_base_font":"lato_n4","font_size_body_int":14,"type_nav_font":"lato_n5","font_size_nav_int":17,"type_logo_font":"lato_n4","font_size_logo_int":16,"uppercase_product_titles":false,"global_border_radius":5,"hover_image_enabled":true,"sold_label_enabled":false,"variant_style":"listed","quickbuy_buttons_toggle":true,"quickbuy_labels_toggle":true,"quickbuy_show_backorder_text":false,"swatch_option_name":"Colour","swatch_method":"images","swatch_enabled":false,"social_facebook_url":"https:\/\/www.facebook.com\/JockeyEurope\/","social_youtube_url":"https:\/\/www.youtube.com\/channel\/UCsEe3j9RTUzoLiArwP7nWYg","social_instagram_url":"https:\/\/www.instagram.com\/jockeyeurope\/?hl=en","social_pinterest_url":"https:\/\/pinterest.com\/jockeyinternational","social_twitter_url":"https:\/\/twitter.com\/jockeyeurope","on_add_to_cart":"go_to_cart","search_type":"product,article,page","favicon":"shopify:\/\/shop_images\/Jockey_favicon_JOCKEY-BLUE_New.png","announcement_bar_bck_color":"#2d353c","overlay_opacity":90,"filter_bar_colour":"#ffffff","align_product_titles":true,"checkout_logo_image":"shopify:\/\/shop_images\/Jockey_Logo_LAB_JOCKEY-BLUE_a8f2b3ae-1ca1-42a0-bc32-1b5090977685.png","checkout_logo_size":"medium","checkout_accent_color":"#8e8e8e","checkout_button_color":"#2d353c","primary_btn_border":"#50248f","secondary_btn_border":"#f9fafb","sections":{"header":{"type":"header","settings":{"logo":"shopify:\/\/shop_images\/Jockey_Logo_LAB_JOCKEY-BLUE_update.png","logo_width":350,"desktop_layout":"center","show_search_bar_desktop":true,"show_search_bar_mobile":true,"logo_position_mobile":"inline","dock_nav":true,"main_linklist":"main-menu","show_messages":false,"home_only_messages":false,"slideshow_messages":false,"message_1_text":"FREE SHIPPING ON ORDERS OVER £50","message_1_url":"","message_2_text":"","message_2_url":"","message_3_text":"","message_3_url":""}},"footer":{"type":"footer","custom_css":["a.small-nav__link {font-size: 13px;}"],"settings":{"small_linklist":"footer","show_powered_by":false,"show_payment_icons":true,"sticky_footer":false,"show_country_selector":true,"show_language_selector":true,"show_subscribe_form":false,"subscribe_title":"SIGN UP TODAY AND SAVE 30%!","subscribe_label":"","subscribe_button":"Sign up","subscribe_description":"<p>TAKE 30% OFF YOUR NEXT ORDER WHEN YOU SIGNUP TO LEARN MORE ABOUT OUR LATEST AND GREATEST DEALS!<\/p>"}},"product-recommendations":{"type":"product-recommendations","settings":{"show_product_recommendations":true,"title":"You may also like","grid":4,"show_vendor":false}},"recently-viewed":{"type":"recently-viewed","settings":{"show_recently_viewed":true,"show_vendor":false}},"1615316079680a6a8a":{"type":"logo-list","blocks":{"1615316079680a6a8a-0":{"type":"logo","settings":{"image":"shopify:\/\/shop_images\/2409-m-uw-category.jpg","image_width":280,"link":"shopify:\/\/collections\/mens-underwear","title":"Underwear"}},"1615316079680a6a8a-2":{"type":"logo","settings":{"image":"shopify:\/\/shop_images\/2409-m-shirrt-category.jpg","image_width":280,"link":"shopify:\/\/collections\/shirts","title":"T-Shirts"}},"1615316079680a6a8a-1":{"type":"logo","settings":{"image":"shopify:\/\/shop_images\/2409-m-lounge-category.jpg","image_width":280,"link":"shopify:\/\/collections\/mens-nightwear-loungewear","title":"Nightwear"}},"17653dde-31bb-4b24-988a-5276d1bc3f9f":{"type":"logo","settings":{"image":"shopify:\/\/shop_images\/2409-m-sale-category.jpg","image_width":280,"link":"shopify:\/\/collections\/mens-sale","title":"Sale"}}},"block_order":["1615316079680a6a8a-0","1615316079680a6a8a-2","1615316079680a6a8a-1","17653dde-31bb-4b24-988a-5276d1bc3f9f"],"custom_css":[],"settings":{"title":"Top Categories for Men","color_bg":"#ffffff","color_title":"#353d43","color_text":"#353d43","image_opacity":100}},"1615317077f9e0dce4":{"type":"logo-list","blocks":{"1615317077f9e0dce4-2":{"type":"logo","settings":{"image":"shopify:\/\/shop_images\/2409-w-bras-category.jpg","image_width":280,"link":"shopify:\/\/collections\/bras-and-bralettes","title":"Bras & Bralettes"}},"1615317077f9e0dce4-0":{"type":"logo","settings":{"image":"shopify:\/\/shop_images\/2409-w-uw-category.jpg","image_width":280,"link":"shopify:\/\/collections\/womens-underwear","title":"Underwear"}},"1615317077f9e0dce4-1":{"type":"logo","settings":{"image":"shopify:\/\/shop_images\/2409-w-lounge-category.jpg","image_width":280,"link":"shopify:\/\/collections\/womens-nightwear-lounge","title":"Sleep & Lounge"}},"fbc5b3e0-afc5-4a49-812a-58806c7fda20":{"type":"logo","settings":{"image":"shopify:\/\/shop_images\/2409-w-sale-category.jpg","image_width":280,"link":"shopify:\/\/collections\/womens-sale","title":"Sale"}}},"block_order":["1615317077f9e0dce4-2","1615317077f9e0dce4-0","1615317077f9e0dce4-1","fbc5b3e0-afc5-4a49-812a-58806c7fda20"],"custom_css":[],"settings":{"title":"Top Categories for Women","color_bg":"#ffffff","color_title":"#353d43","color_text":"#353d43","image_opacity":100}},"da3a73c3-2035-4d94-8dfe-d350821cd83e":{"type":"featured-collection","disabled":true,"settings":{"title":"Buy More. Save More!","link_text":"Shop Women's Mulitpacks >","collection":"womens-multipacks","show_vendor":false,"enable_carousel":true,"grid":5,"row_count":1}},"d6f08b5b-a3a9-4fed-9990-2d206b9e09a8":{"type":"featured-collection","disabled":true,"settings":{"title":"Buy More. Save More!","link_text":"Shop Men's Multipacks >","collection":"multipacks","show_vendor":false,"enable_carousel":true,"grid":5,"row_count":1}},"rich_text_7yiVVP":{"type":"rich-text","custom_css":["h2 {text-align: left;}",".rich-text-section {padding-left: 30px; padding-right: 30px; padding-top: 18px; padding-bottom: 0px;}","@media (max-width: 992px) {h2 {text-align: center; }}"],"settings":{"title":"See What's New","text":"","button_label":"","button_link":"","enlarge_text":true,"full_width":true,"color_title":"#333333","color_text":"#333333","color_bg":"#ffffff"}},"rich_text_rFtEXw":{"type":"rich-text","custom_css":["h2 {text-align: left;}",".rich-text-section {padding-left: 30px; padding-right: 30px; padding-top: 18px; padding-bottom: 0px;}","@media (max-width: 992px) {h2 {text-align: center; }}"],"settings":{"title":"Featured","text":"","button_label":"","button_link":"","enlarge_text":true,"full_width":true,"color_title":"#333333","color_text":"#333333","color_bg":"#ffffff"}},"rich_text_bjmAcd":{"type":"rich-text","custom_css":[".rich-text-section {padding-left: 30px; padding-right: 30px; padding-top: 18px; padding-bottom: 0px;}"],"settings":{"title":"Shop Fall Favorites","text":"","button_label":"","button_link":"","enlarge_text":false,"full_width":false,"color_title":"#333333","color_text":"#333333","color_bg":"#ffffff"}},"rich_text_jbLDMF":{"type":"rich-text","custom_css":["h2 {font-size: 2rem !important; line-height: 1 !important;}"],"settings":{"title":"Free Shipping on orders above £45","text":"","button_label":"","button_link":"","enlarge_text":false,"full_width":false,"color_title":"#ffffff","color_text":"#333333","color_bg":"#223152"}},"rich_text_weTqVt":{"type":"rich-text","custom_css":[".rich-text-section {padding-left: 30px; padding-right: 30px; padding-top: 0px; padding-bottom: 12px;}"],"settings":{"title":"","text":"","button_label":"Shop All Fall Favorites","button_link":"https:\/\/www.jockey.co.uk\/collections\/jockey-shop-all-fall-favorites","enlarge_text":false,"full_width":false,"color_title":"#333333","color_text":"#333333","color_bg":"#ffffff"}},"logo_list_aXYtHP":{"type":"logo-list","blocks":{"logo_L7MYPz":{"type":"logo","settings":{"image":"shopify:\/\/shop_images\/2408-m-top-shop_e8b5861f-0d53-4a4f-9dd4-ca78cb1bbb50.jpg","image_width":280,"link":"shopify:\/\/collections\/mens-new-arrivals","title":"Shop Men"}},"logo_tr6UyE":{"type":"logo","settings":{"image":"shopify:\/\/shop_images\/2408-w-top-shop_8c42517f-d89e-44cb-9ed8-eda6f55047ad.jpg","image_width":280,"link":"shopify:\/\/collections\/womens-new-arrivals","title":"Shop Women"}}},"block_order":["logo_L7MYPz","logo_tr6UyE"],"custom_css":[".logo-list-section {display: none !important;}","@media (max-width: 768px) {.logo-list-section {display: block !important; }}"],"settings":{"title":"","color_bg":"#fafafa","color_title":"#333333","color_text":"#333333","image_opacity":100}},"banner":{"type":"banner","blocks":{"banner-0":{"type":"image","settings":{"image_link":"","color_overlay_bg":"#ffffff","overlay_opacity":80,"color_overlay_text":"#333333","text_alignment":"center","overlay_position_x":50,"overlay_position_y":80,"overlay_title":"Hero slideshow","enlarge_title":false,"overlay_title_width":100,"styled_words":"","words_style":"stencil","highlight_words_top":10,"highlight_color":"#ffffff","styled_word_color":"#5d68bf","overlay_text":"Use this full width section to welcome customers to your store, share some news or say something about your brand","enlarge_text":false,"overlay_url_text_1":"Optional buttons","overlay_url_1":"","overlay_url_text_2":"Optional buttons","overlay_url_2":"","overlay_url_style":"button_1","color_label_background":"#ffffff","color_label_text":"#333333","show_chevron":true,"product_id_1":"","chevron_position_1":"right","label_position_x_1":20,"label_position_y_1":30,"product_id_2":"","chevron_position_2":"right","label_position_x_2":80,"label_position_y_2":50}},"banner-1":{"type":"image","settings":{"image_link":"","color_overlay_bg":"#ffffff","overlay_opacity":80,"color_overlay_text":"#333333","text_alignment":"center","overlay_position_x":50,"overlay_position_y":80,"overlay_title":"Hero slideshow","enlarge_title":false,"overlay_title_width":100,"styled_words":"","words_style":"stencil","highlight_words_top":10,"highlight_color":"#ffffff","styled_word_color":"#5d68bf","overlay_text":"Use this full width section to welcome customers to your store, share some news or say something about your brand","enlarge_text":false,"overlay_url_text_1":"Optional buttons","overlay_url_1":"","overlay_url_text_2":"Optional buttons","overlay_url_2":"","overlay_url_style":"button_1","color_label_background":"#ffffff","color_label_text":"#333333","show_chevron":true,"product_id_1":"","chevron_position_1":"right","label_position_x_1":20,"label_position_y_1":30,"product_id_2":"","chevron_position_2":"right","label_position_x_2":80,"label_position_y_2":50}}},"block_order":["banner-0","banner-1"],"settings":{"show_banner":false,"height":"fixed","height_desktop":500,"height_mobile":400,"mobile_text_below":true,"slide_transition":"fade","slideshow_autoplay":true,"slideshow_autoplay_speed":6}}},"content_for_index":["rich_text_jbLDMF","logo_list_aXYtHP","rich_text_7yiVVP","rich_text_bjmAcd","rich_text_weTqVt","d6f08b5b-a3a9-4fed-9990-2d206b9e09a8","rich_text_rFtEXw","da3a73c3-2035-4d94-8dfe-d350821cd83e","1615316079680a6a8a","1615317077f9e0dce4"],"blocks":{"4215564508307704909":{"type":"shopify:\/\/apps\/sitemap-noindex-seo-tools\/blocks\/app-embed\/4d815e2c-5af0-46ba-8301-d0f9cf660031","disabled":false,"settings":{}},"5134484470793087125":{"type":"shopify:\/\/apps\/vitals\/blocks\/app-embed\/aeb48102-2a5a-4f39-bdbd-d8d49f4e20b8","disabled":false,"settings":{}},"64183146856184865000":{"type":"shopify:\/\/apps\/gdpr-cookie-consent\/blocks\/banner\/58c0baa2-6cc1-480c-9ea6-38d6d559556a","disabled":false,"settings":{}}}},"presets":{"Spark":{"color_body_background":"#ffffff","accent_color":"#d5f3f3","color_body_text":"#230051","color_body_link":"#5d68bf","color_sale_text":"#cd201a","header_bck_color":"#ffffff","logo_text_color":"#230051","header_text_color":"#230051","main_menu_bck_color":"#f4f6f8","main_menu_link_color":"#230051","mobile_menu_bck_color":"#b7ecec","store_messages_bck_color":"#47c1bf","footer_bck_color":"#00848e","footer_text_color":"#ffffff","primary_btn_background":"#50248f","primary_btn_text":"#ffffff","secondary_btn_background":"#ffffff","secondary_btn_text":"#230051","quickbuy_form_background":"#ebf5fa","quickbuy_form_text":"#230051","overlay_opacity":80,"collection_feature_header_background":"#42467e","filter_bar_colour":"#230051","type_base_font":"avenir_next_rounded_n4","type_heading_font":"avenir_next_rounded_n6","type_nav_font":"avenir_next_rounded_n5","type_logo_font":"avenir_next_rounded_n5","font_size_body_int":16,"font_size_nav_int":16,"font_size_logo_int":24,"global_border_radius":15,"hover_image_enabled":false,"quickbuy_buttons_toggle":true,"quickbuy_labels_toggle":true,"variant_style":"listed","swatch_enabled":true,"swatch_option_name":"Color","on_add_to_cart":"ajax","search_type":"product","announcement_bar_bck_color":"#43467f","primary_btn_border":"#50248f","secondary_btn_border":"#f9fafb"},"Inspire":{"color_body_background":"#ffffff","accent_color":"#222222","color_body_text":"#1a1a1a","color_body_link":"#cd2026","color_sale_text":"#cd201a","header_bck_color":"#ffffff","logo_text_color":"#222222","header_text_color":"#222222","main_menu_bck_color":"#f2f2f2","main_menu_link_color":"#222222","mobile_menu_bck_color":"#ffffff","store_messages_bck_color":"#cd2026","footer_bck_color":"#f2f2f2","footer_text_color":"#222222","primary_btn_background":"#1a1a1a","primary_btn_text":"#ffffff","secondary_btn_background":"#ffffff","secondary_btn_text":"#1a1a1a","quickbuy_form_background":"#f2f2f2","quickbuy_form_text":"#222222","overlay_opacity":90,"collection_feature_header_background":"#e9e3e1","filter_bar_colour":"#ffffff","type_base_font":"gill_sans_nova_n4","type_heading_font":"friz_quadrata_n4","type_nav_font":"gill_sans_nova_n4","type_logo_font":"gill_sans_nova_n4","font_size_body_int":16,"font_size_nav_int":16,"font_size_logo_int":24,"global_border_radius":0,"hover_image_enabled":true,"quickbuy_buttons_toggle":true,"quickbuy_labels_toggle":true,"variant_style":"listed","swatch_enabled":true,"swatch_option_name":"Color","on_add_to_cart":"ajax","search_type":"product","announcement_bar_bck_color":"#43467f","primary_btn_border":"#212b36","secondary_btn_border":"#dfe3e8"},"Flourish":{"color_body_background":"#ffffff","accent_color":"#dae4e6","color_body_text":"#212b36","color_body_link":"#5d68bf","color_sale_text":"#cd201a","header_bck_color":"#ffffff","logo_text_color":"#212b36","header_text_color":"#212b36","main_menu_bck_color":"#ffffff","main_menu_link_color":"#212b36","mobile_menu_bck_color":"#212b36","store_messages_bck_color":"#10079f","footer_bck_color":"#ecf1f2","footer_text_color":"#212b36","primary_btn_background":"#212b36","primary_btn_text":"#ffffff","secondary_btn_background":"#ffffff","secondary_btn_text":"#212b36","quickbuy_form_background":"#ecf1f2","quickbuy_form_text":"#212b36","overlay_opacity":80,"collection_feature_header_background":"#dae4e6","filter_bar_colour":"#ffffff","type_base_font":"futura_n4","type_heading_font":"futura_n4","type_nav_font":"futura_n5","type_logo_font":"futura_n4","font_size_body_int":16,"font_size_nav_int":16,"font_size_logo_int":28,"global_border_radius":0,"hover_image_enabled":true,"quickbuy_buttons_toggle":true,"quickbuy_labels_toggle":true,"variant_style":"listed","swatch_enabled":true,"swatch_option_name":"Color","on_add_to_cart":"ajax","search_type":"product","announcement_bar_bck_color":"#43467f","primary_btn_border":"#212b36","secondary_btn_border":"#dfe3e8"}}}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "current": {
+    "color_body_background": "#ffffff",
+    "accent_color": "#ffffff",
+    "color_body_text": "#1a1a1a",
+    "color_body_link": "#223152",
+    "color_sale_text": "#cd201a",
+    "header_bck_color": "#ffffff",
+    "logo_text_color": "#223152",
+    "header_text_color": "#223152",
+    "main_menu_bck_color": "#ffffff",
+    "main_menu_link_color": "#2d353c",
+    "mobile_menu_bck_color": "#ffffff",
+    "store_messages_bck_color": "#2d353c",
+    "footer_text_color": "#1a1a1a",
+    "footer_bck_color": "#f2f2f2",
+    "primary_btn_background": "#1a1a1a",
+    "primary_btn_text": "#ffffff",
+    "secondary_btn_background": "#ffffff",
+    "secondary_btn_text": "#2d353c",
+    "quickbuy_form_background": "#f2f2f2",
+    "quickbuy_form_text": "#222222",
+    "collection_feature_header_background": "#e9e3e1",
+    "type_heading_font": "lato_n7",
+    "uppercase_headings": false,
+    "type_base_font": "lato_n4",
+    "font_size_body_int": 14,
+    "type_nav_font": "lato_n5",
+    "font_size_nav_int": 17,
+    "type_logo_font": "lato_n4",
+    "font_size_logo_int": 16,
+    "uppercase_product_titles": false,
+    "global_border_radius": 5,
+    "hover_image_enabled": true,
+    "sold_label_enabled": false,
+    "variant_style": "listed",
+    "quickbuy_buttons_toggle": true,
+    "quickbuy_labels_toggle": true,
+    "quickbuy_show_backorder_text": false,
+    "swatch_option_name": "Colour",
+    "swatch_method": "images",
+    "swatch_enabled": false,
+    "social_facebook_url": "https://www.facebook.com/JockeyEurope/",
+    "social_youtube_url": "https://www.youtube.com/channel/UCsEe3j9RTUzoLiArwP7nWYg",
+    "social_instagram_url": "https://www.instagram.com/jockeyeurope/?hl=en",
+    "social_pinterest_url": "https://pinterest.com/jockeyinternational",
+    "social_twitter_url": "https://twitter.com/jockeyeurope",
+    "on_add_to_cart": "go_to_cart",
+    "search_type": "product,article,page",
+    "favicon": "shopify://shop_images/Jockey_favicon_JOCKEY-BLUE_New.png",
+    "checkout_logo_image": "shopify://shop_images/Jockey_Logo_LAB_JOCKEY-BLUE_a8f2b3ae-1ca1-42a0-bc32-1b5090977685.png",
+    "checkout_logo_size": "medium",
+    "checkout_accent_color": "#8e8e8e",
+    "checkout_button_color": "#2d353c",
+    "announcement_bar_bck_color": "#2d353c",
+    "overlay_opacity": 90,
+    "filter_bar_colour": "#ffffff",
+    "align_product_titles": true,
+    "primary_btn_border": "#50248f",
+    "secondary_btn_border": "#f9fafb",
+    "sections": {
+      "header": {
+        "type": "header",
+        "settings": {
+          "logo": "shopify://shop_images/Jockey_Logo_LAB_JOCKEY-BLUE_update.png",
+          "logo_width": 350,
+          "desktop_layout": "center",
+          "show_search_bar_desktop": true,
+          "show_search_bar_mobile": true,
+          "logo_position_mobile": "inline",
+          "dock_nav": true,
+          "main_linklist": "main-menu",
+          "show_messages": false,
+          "home_only_messages": false,
+          "slideshow_messages": false,
+          "message_1_text": "FREE SHIPPING ON ORDERS OVER £50",
+          "message_1_url": "",
+          "message_2_text": "",
+          "message_2_url": "",
+          "message_3_text": "",
+          "message_3_url": ""
+        }
+      },
+      "footer": {
+        "type": "footer",
+        "custom_css": [
+          "a.small-nav__link {font-size: 13px;}"
+        ],
+        "settings": {
+          "small_linklist": "footer",
+          "show_powered_by": false,
+          "show_payment_icons": true,
+          "sticky_footer": false,
+          "show_country_selector": true,
+          "show_language_selector": true,
+          "show_subscribe_form": false,
+          "subscribe_title": "SIGN UP TODAY AND SAVE 30%!",
+          "subscribe_label": "",
+          "subscribe_button": "Sign up",
+          "subscribe_description": "<p>TAKE 30% OFF YOUR NEXT ORDER WHEN YOU SIGNUP TO LEARN MORE ABOUT OUR LATEST AND GREATEST DEALS!</p>"
+        }
+      },
+      "product-recommendations": {
+        "type": "product-recommendations",
+        "settings": {
+          "show_product_recommendations": true,
+          "title": "You may also like",
+          "grid": 4,
+          "show_vendor": false
+        }
+      },
+      "recently-viewed": {
+        "type": "recently-viewed",
+        "settings": {
+          "show_recently_viewed": true,
+          "show_vendor": false
+        }
+      },
+      "1615316079680a6a8a": {
+        "type": "logo-list",
+        "blocks": {
+          "1615316079680a6a8a-0": {
+            "type": "logo",
+            "settings": {
+              "image": "shopify://shop_images/2409-m-uw-category.jpg",
+              "image_width": 280,
+              "link": "shopify://collections/mens-underwear",
+              "title": "Underwear"
+            }
+          },
+          "1615316079680a6a8a-2": {
+            "type": "logo",
+            "settings": {
+              "image": "shopify://shop_images/2409-m-shirrt-category.jpg",
+              "image_width": 280,
+              "link": "shopify://collections/shirts",
+              "title": "T-Shirts"
+            }
+          },
+          "1615316079680a6a8a-1": {
+            "type": "logo",
+            "settings": {
+              "image": "shopify://shop_images/2409-m-lounge-category.jpg",
+              "image_width": 280,
+              "link": "shopify://collections/mens-nightwear-loungewear",
+              "title": "Nightwear"
+            }
+          },
+          "17653dde-31bb-4b24-988a-5276d1bc3f9f": {
+            "type": "logo",
+            "settings": {
+              "image": "shopify://shop_images/2409-m-sale-category.jpg",
+              "image_width": 280,
+              "link": "shopify://collections/mens-sale",
+              "title": "Sale"
+            }
+          }
+        },
+        "block_order": [
+          "1615316079680a6a8a-0",
+          "1615316079680a6a8a-2",
+          "1615316079680a6a8a-1",
+          "17653dde-31bb-4b24-988a-5276d1bc3f9f"
+        ],
+        "custom_css": [],
+        "settings": {
+          "title": "Top Categories for Men",
+          "color_bg": "#ffffff",
+          "color_title": "#353d43",
+          "color_text": "#353d43",
+          "image_opacity": 100
+        }
+      },
+      "1615317077f9e0dce4": {
+        "type": "logo-list",
+        "blocks": {
+          "1615317077f9e0dce4-2": {
+            "type": "logo",
+            "settings": {
+              "image": "shopify://shop_images/2409-w-bras-category.jpg",
+              "image_width": 280,
+              "link": "shopify://collections/bras-and-bralettes",
+              "title": "Bras & Bralettes"
+            }
+          },
+          "1615317077f9e0dce4-0": {
+            "type": "logo",
+            "settings": {
+              "image": "shopify://shop_images/2409-w-uw-category.jpg",
+              "image_width": 280,
+              "link": "shopify://collections/womens-underwear",
+              "title": "Underwear"
+            }
+          },
+          "1615317077f9e0dce4-1": {
+            "type": "logo",
+            "settings": {
+              "image": "shopify://shop_images/2409-w-lounge-category.jpg",
+              "image_width": 280,
+              "link": "shopify://collections/womens-nightwear-lounge",
+              "title": "Sleep & Lounge"
+            }
+          },
+          "fbc5b3e0-afc5-4a49-812a-58806c7fda20": {
+            "type": "logo",
+            "settings": {
+              "image": "shopify://shop_images/2409-w-sale-category.jpg",
+              "image_width": 280,
+              "link": "shopify://collections/womens-sale",
+              "title": "Sale"
+            }
+          }
+        },
+        "block_order": [
+          "1615317077f9e0dce4-2",
+          "1615317077f9e0dce4-0",
+          "1615317077f9e0dce4-1",
+          "fbc5b3e0-afc5-4a49-812a-58806c7fda20"
+        ],
+        "custom_css": [],
+        "settings": {
+          "title": "Top Categories for Women",
+          "color_bg": "#ffffff",
+          "color_title": "#353d43",
+          "color_text": "#353d43",
+          "image_opacity": 100
+        }
+      },
+      "da3a73c3-2035-4d94-8dfe-d350821cd83e": {
+        "type": "featured-collection",
+        "disabled": true,
+        "settings": {
+          "title": "Buy More. Save More!",
+          "link_text": "Shop Women's Mulitpacks >",
+          "collection": "womens-multipacks",
+          "show_vendor": false,
+          "enable_carousel": true,
+          "grid": 5,
+          "row_count": 1
+        }
+      },
+      "d6f08b5b-a3a9-4fed-9990-2d206b9e09a8": {
+        "type": "featured-collection",
+        "disabled": true,
+        "settings": {
+          "title": "Buy More. Save More!",
+          "link_text": "Shop Men's Multipacks >",
+          "collection": "multipacks",
+          "show_vendor": false,
+          "enable_carousel": true,
+          "grid": 5,
+          "row_count": 1
+        }
+      },
+      "rich_text_7yiVVP": {
+        "type": "rich-text",
+        "custom_css": [
+          "h2 {text-align: left;}",
+          ".rich-text-section {padding-left: 30px; padding-right: 30px; padding-top: 18px; padding-bottom: 0px;}",
+          "@media (max-width: 992px) {h2 {text-align: center; }}"
+        ],
+        "settings": {
+          "title": "See What's New",
+          "text": "",
+          "button_label": "",
+          "button_link": "",
+          "enlarge_text": true,
+          "full_width": true,
+          "color_title": "#333333",
+          "color_text": "#333333",
+          "color_bg": "#ffffff"
+        }
+      },
+      "rich_text_rFtEXw": {
+        "type": "rich-text",
+        "custom_css": [
+          "h2 {text-align: left;}",
+          ".rich-text-section {padding-left: 30px; padding-right: 30px; padding-top: 18px; padding-bottom: 0px;}",
+          "@media (max-width: 992px) {h2 {text-align: center; }}"
+        ],
+        "settings": {
+          "title": "Featured",
+          "text": "",
+          "button_label": "",
+          "button_link": "",
+          "enlarge_text": true,
+          "full_width": true,
+          "color_title": "#333333",
+          "color_text": "#333333",
+          "color_bg": "#ffffff"
+        }
+      },
+      "rich_text_bjmAcd": {
+        "type": "rich-text",
+        "custom_css": [
+          ".rich-text-section {padding-left: 30px; padding-right: 30px; padding-top: 18px; padding-bottom: 0px;}"
+        ],
+        "settings": {
+          "title": "Shop Fall Favorites",
+          "text": "",
+          "button_label": "",
+          "button_link": "",
+          "enlarge_text": false,
+          "full_width": false,
+          "color_title": "#333333",
+          "color_text": "#333333",
+          "color_bg": "#ffffff"
+        }
+      },
+      "rich_text_jbLDMF": {
+        "type": "rich-text",
+        "custom_css": [
+          "h2 {font-size: 2rem !important; line-height: 1 !important;}"
+        ],
+        "settings": {
+          "title": "Free Shipping on orders above £45",
+          "text": "",
+          "button_label": "",
+          "button_link": "",
+          "enlarge_text": false,
+          "full_width": false,
+          "color_title": "#ffffff",
+          "color_text": "#333333",
+          "color_bg": "#223152"
+        }
+      },
+      "rich_text_weTqVt": {
+        "type": "rich-text",
+        "custom_css": [
+          ".rich-text-section {padding-left: 30px; padding-right: 30px; padding-top: 0px; padding-bottom: 12px;}"
+        ],
+        "settings": {
+          "title": "",
+          "text": "",
+          "button_label": "Shop All Fall Favorites",
+          "button_link": "https://www.jockey.co.uk/collections/jockey-shop-all-fall-favorites",
+          "enlarge_text": false,
+          "full_width": false,
+          "color_title": "#333333",
+          "color_text": "#333333",
+          "color_bg": "#ffffff"
+        }
+      },
+      "logo_list_aXYtHP": {
+        "type": "logo-list",
+        "blocks": {
+          "logo_L7MYPz": {
+            "type": "logo",
+            "settings": {
+              "image": "shopify://shop_images/2408-m-top-shop_e8b5861f-0d53-4a4f-9dd4-ca78cb1bbb50.jpg",
+              "image_width": 280,
+              "link": "shopify://collections/mens-new-arrivals",
+              "title": "Shop Men"
+            }
+          },
+          "logo_tr6UyE": {
+            "type": "logo",
+            "settings": {
+              "image": "shopify://shop_images/2408-w-top-shop_8c42517f-d89e-44cb-9ed8-eda6f55047ad.jpg",
+              "image_width": 280,
+              "link": "shopify://collections/womens-new-arrivals",
+              "title": "Shop Women"
+            }
+          }
+        },
+        "block_order": [
+          "logo_L7MYPz",
+          "logo_tr6UyE"
+        ],
+        "custom_css": [
+          ".logo-list-section {display: none !important;}",
+          "@media (max-width: 768px) {.logo-list-section {display: block !important; }}"
+        ],
+        "settings": {
+          "title": "",
+          "color_bg": "#fafafa",
+          "color_title": "#333333",
+          "color_text": "#333333",
+          "image_opacity": 100
+        }
+      },
+      "banner": {
+        "type": "banner",
+        "blocks": {
+          "banner-0": {
+            "type": "image",
+            "settings": {
+              "image_link": "",
+              "color_overlay_bg": "#ffffff",
+              "overlay_opacity": 80,
+              "color_overlay_text": "#333333",
+              "text_alignment": "center",
+              "overlay_position_x": 50,
+              "overlay_position_y": 80,
+              "overlay_title": "Hero slideshow",
+              "enlarge_title": false,
+              "overlay_title_width": 100,
+              "styled_words": "",
+              "words_style": "stencil",
+              "highlight_words_top": 10,
+              "highlight_color": "#ffffff",
+              "styled_word_color": "#5d68bf",
+              "overlay_text": "Use this full width section to welcome customers to your store, share some news or say something about your brand",
+              "enlarge_text": false,
+              "overlay_url_text_1": "Optional buttons",
+              "overlay_url_1": "",
+              "overlay_url_text_2": "Optional buttons",
+              "overlay_url_2": "",
+              "overlay_url_style": "button_1",
+              "color_label_background": "#ffffff",
+              "color_label_text": "#333333",
+              "show_chevron": true,
+              "product_id_1": "",
+              "chevron_position_1": "right",
+              "label_position_x_1": 20,
+              "label_position_y_1": 30,
+              "product_id_2": "",
+              "chevron_position_2": "right",
+              "label_position_x_2": 80,
+              "label_position_y_2": 50
+            }
+          },
+          "banner-1": {
+            "type": "image",
+            "settings": {
+              "image_link": "",
+              "color_overlay_bg": "#ffffff",
+              "overlay_opacity": 80,
+              "color_overlay_text": "#333333",
+              "text_alignment": "center",
+              "overlay_position_x": 50,
+              "overlay_position_y": 80,
+              "overlay_title": "Hero slideshow",
+              "enlarge_title": false,
+              "overlay_title_width": 100,
+              "styled_words": "",
+              "words_style": "stencil",
+              "highlight_words_top": 10,
+              "highlight_color": "#ffffff",
+              "styled_word_color": "#5d68bf",
+              "overlay_text": "Use this full width section to welcome customers to your store, share some news or say something about your brand",
+              "enlarge_text": false,
+              "overlay_url_text_1": "Optional buttons",
+              "overlay_url_1": "",
+              "overlay_url_text_2": "Optional buttons",
+              "overlay_url_2": "",
+              "overlay_url_style": "button_1",
+              "color_label_background": "#ffffff",
+              "color_label_text": "#333333",
+              "show_chevron": true,
+              "product_id_1": "",
+              "chevron_position_1": "right",
+              "label_position_x_1": 20,
+              "label_position_y_1": 30,
+              "product_id_2": "",
+              "chevron_position_2": "right",
+              "label_position_x_2": 80,
+              "label_position_y_2": 50
+            }
+          }
+        },
+        "block_order": [
+          "banner-0",
+          "banner-1"
+        ],
+        "settings": {
+          "show_banner": false,
+          "height": "fixed",
+          "height_desktop": 500,
+          "height_mobile": 400,
+          "mobile_text_below": true,
+          "slide_transition": "fade",
+          "slideshow_autoplay": true,
+          "slideshow_autoplay_speed": 6
+        }
+      }
+    },
+    "content_for_index": [
+      "rich_text_jbLDMF",
+      "logo_list_aXYtHP",
+      "rich_text_7yiVVP",
+      "rich_text_bjmAcd",
+      "rich_text_weTqVt",
+      "d6f08b5b-a3a9-4fed-9990-2d206b9e09a8",
+      "rich_text_rFtEXw",
+      "da3a73c3-2035-4d94-8dfe-d350821cd83e",
+      "1615316079680a6a8a",
+      "1615317077f9e0dce4"
+    ],
+    "blocks": {
+      "11074193060611426105": {
+        "type": "shopify://apps/froonze-loyalty-wishlist/blocks/product_wishlist/3c495b68-652c-468d-a0ef-5bad6935d104",
+        "disabled": true,
+        "settings": {
+          "add_button_color": "#5873F9",
+          "add_button_text_color": "#ffffff",
+          "remove_button_color": "#333333",
+          "remove_button_text_color": "#ffffff",
+          "placement": "below_add_to_cart",
+          "product_css_selector": "",
+          "button_style": "icon_and_text",
+          "border_radius": 4,
+          "shadow": true,
+          "offset_top": 0,
+          "offset_bottom": 0,
+          "offset_left": 0,
+          "offset_right": 0,
+          "collections_wishlist_button": "overlay",
+          "collection_button_border_radius": 50,
+          "floating_link_placement": "right",
+          "floating_link_vertical_offset": 0,
+          "floating_link_lateral_offset": 0,
+          "floating_link_border_radius": 4,
+          "navigation_link": false,
+          "navigation_link_css_selector": "",
+          "custom_css": ""
+        }
+      },
+      "11356494674496455976": {
+        "type": "shopify://apps/froonze-loyalty-wishlist/blocks/loyalty/3c495b68-652c-468d-a0ef-5bad6935d104",
+        "disabled": false,
+        "settings": {}
+      }
+    }
+  },
+  "presets": {
+    "Spark": {
+      "color_body_background": "#ffffff",
+      "accent_color": "#d5f3f3",
+      "color_body_text": "#230051",
+      "color_body_link": "#5d68bf",
+      "color_sale_text": "#cd201a",
+      "header_bck_color": "#ffffff",
+      "logo_text_color": "#230051",
+      "header_text_color": "#230051",
+      "main_menu_bck_color": "#f4f6f8",
+      "main_menu_link_color": "#230051",
+      "mobile_menu_bck_color": "#b7ecec",
+      "store_messages_bck_color": "#47c1bf",
+      "footer_bck_color": "#00848e",
+      "footer_text_color": "#ffffff",
+      "primary_btn_background": "#50248f",
+      "primary_btn_text": "#ffffff",
+      "secondary_btn_background": "#ffffff",
+      "secondary_btn_text": "#230051",
+      "quickbuy_form_background": "#ebf5fa",
+      "quickbuy_form_text": "#230051",
+      "overlay_opacity": 80,
+      "collection_feature_header_background": "#42467e",
+      "filter_bar_colour": "#230051",
+      "type_base_font": "avenir_next_rounded_n4",
+      "type_heading_font": "avenir_next_rounded_n6",
+      "type_nav_font": "avenir_next_rounded_n5",
+      "type_logo_font": "avenir_next_rounded_n5",
+      "font_size_body_int": 16,
+      "font_size_nav_int": 16,
+      "font_size_logo_int": 24,
+      "global_border_radius": 15,
+      "hover_image_enabled": false,
+      "quickbuy_buttons_toggle": true,
+      "quickbuy_labels_toggle": true,
+      "variant_style": "listed",
+      "swatch_enabled": true,
+      "swatch_option_name": "Color",
+      "on_add_to_cart": "ajax",
+      "search_type": "product",
+      "announcement_bar_bck_color": "#43467f",
+      "primary_btn_border": "#50248f",
+      "secondary_btn_border": "#f9fafb"
+    },
+    "Inspire": {
+      "color_body_background": "#ffffff",
+      "accent_color": "#222222",
+      "color_body_text": "#1a1a1a",
+      "color_body_link": "#cd2026",
+      "color_sale_text": "#cd201a",
+      "header_bck_color": "#ffffff",
+      "logo_text_color": "#222222",
+      "header_text_color": "#222222",
+      "main_menu_bck_color": "#f2f2f2",
+      "main_menu_link_color": "#222222",
+      "mobile_menu_bck_color": "#ffffff",
+      "store_messages_bck_color": "#cd2026",
+      "footer_bck_color": "#f2f2f2",
+      "footer_text_color": "#222222",
+      "primary_btn_background": "#1a1a1a",
+      "primary_btn_text": "#ffffff",
+      "secondary_btn_background": "#ffffff",
+      "secondary_btn_text": "#1a1a1a",
+      "quickbuy_form_background": "#f2f2f2",
+      "quickbuy_form_text": "#222222",
+      "overlay_opacity": 90,
+      "collection_feature_header_background": "#e9e3e1",
+      "filter_bar_colour": "#ffffff",
+      "type_base_font": "gill_sans_nova_n4",
+      "type_heading_font": "friz_quadrata_n4",
+      "type_nav_font": "gill_sans_nova_n4",
+      "type_logo_font": "gill_sans_nova_n4",
+      "font_size_body_int": 16,
+      "font_size_nav_int": 16,
+      "font_size_logo_int": 24,
+      "global_border_radius": 0,
+      "hover_image_enabled": true,
+      "quickbuy_buttons_toggle": true,
+      "quickbuy_labels_toggle": true,
+      "variant_style": "listed",
+      "swatch_enabled": true,
+      "swatch_option_name": "Color",
+      "on_add_to_cart": "ajax",
+      "search_type": "product",
+      "announcement_bar_bck_color": "#43467f",
+      "primary_btn_border": "#212b36",
+      "secondary_btn_border": "#dfe3e8"
+    },
+    "Flourish": {
+      "color_body_background": "#ffffff",
+      "accent_color": "#dae4e6",
+      "color_body_text": "#212b36",
+      "color_body_link": "#5d68bf",
+      "color_sale_text": "#cd201a",
+      "header_bck_color": "#ffffff",
+      "logo_text_color": "#212b36",
+      "header_text_color": "#212b36",
+      "main_menu_bck_color": "#ffffff",
+      "main_menu_link_color": "#212b36",
+      "mobile_menu_bck_color": "#212b36",
+      "store_messages_bck_color": "#10079f",
+      "footer_bck_color": "#ecf1f2",
+      "footer_text_color": "#212b36",
+      "primary_btn_background": "#212b36",
+      "primary_btn_text": "#ffffff",
+      "secondary_btn_background": "#ffffff",
+      "secondary_btn_text": "#212b36",
+      "quickbuy_form_background": "#ecf1f2",
+      "quickbuy_form_text": "#212b36",
+      "overlay_opacity": 80,
+      "collection_feature_header_background": "#dae4e6",
+      "filter_bar_colour": "#ffffff",
+      "type_base_font": "futura_n4",
+      "type_heading_font": "futura_n4",
+      "type_nav_font": "futura_n5",
+      "type_logo_font": "futura_n4",
+      "font_size_body_int": 16,
+      "font_size_nav_int": 16,
+      "font_size_logo_int": 28,
+      "global_border_radius": 0,
+      "hover_image_enabled": true,
+      "quickbuy_buttons_toggle": true,
+      "quickbuy_labels_toggle": true,
+      "variant_style": "listed",
+      "swatch_enabled": true,
+      "swatch_option_name": "Color",
+      "on_add_to_cart": "ajax",
+      "search_type": "product",
+      "announcement_bar_bck_color": "#43467f",
+      "primary_btn_border": "#212b36",
+      "secondary_btn_border": "#dfe3e8"
+    }
+  }
+}
