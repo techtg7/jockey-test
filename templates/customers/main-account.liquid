@@ -1,0 +1,40 @@
+{% if customer %}
+<div class="account-wrapper">
+  <!-- Sidebar -->
+  <aside class="account-sidebar">
+    <h3>Hello, {{ customer.first_name }}</h3>
+    <ul>
+      <li><a href="#profile">My Profile</a></li>
+      <li><a href="#orders">My Orders</a></li>
+      <li><a href="/account/addresses">Addresses</a></li>
+      <li><a href="/account/logout">Logout</a></li>
+    </ul>
+  </aside>
+
+  <!-- Main Content -->
+  <main class="account-content">
+    <section id="profile">
+      <h2>Profile Info</h2>
+      <p>Email: {{ customer.email }}</p>
+    </section>
+
+    <section id="orders">
+      <h2>Order History</h2>
+      {% if customer.orders_count > 0 %}
+        <ul>
+          {% for order in customer.orders %}
+            <li>
+              <a href="{{ order.customer_url }}">Order #{{ order.name }}</a>
+              — {{ order.financial_status }} — {{ order.created_at | date: "%b %d, %Y" }}
+            </li>
+          {% endfor %}
+        </ul>
+      {% else %}
+        <p>You have no orders yet.</p>
+      {% endif %}
+    </section>
+  </main>
+</div>
+{% else %}
+  <p>Please <a href="/account/login">log in</a> to view your account.</p>
+{% endif %}
