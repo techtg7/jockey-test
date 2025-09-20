@@ -37,7 +37,7 @@
             {{ form.errors | default_errors }}
 
             <div class="input-group">
-              <label for="CustomerEmail">{{ 'customer.login.email' | t }}</label>
+              <label for="CustomerEmail">{{ 'customer.login.email' | t }}</}}</label>
               <input type="email"
                     name="customer[email]"
                     id="CustomerEmail"
@@ -119,7 +119,7 @@
           </ul>
         </div>
         
-        <!-- Changed from green btn-success to black btn-dark -->
+        <!-- 🔥 Only this button changed from btn-success to btn-dark -->
         <button class="btn btn-dark btn-join" id="openJoinModal">
           Join Jockey
         </button>
@@ -150,94 +150,6 @@
       <a href="{{ routes.root_url }}">← Return to Store</a>
     </div>
 
-  </div>
-
-  <!-- Join Jockey Modal Popup -->
-  <div id="joinModal" class="modal-overlay">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h2>Join Jockey</h2>
-        <button class="modal-close" id="closeModal">&times;</button>
-      </div>
-      
-      <div class="modal-body">
-        <div class="benefits-header">
-          <div class="benefits-box">
-            <h3>Benefits include</h3>
-            <ul class="benefits-list">
-              <li><span class="icon">💰</span> <strong>10% off all the time</strong></li>
-              <li><span class="icon">🚚</span> <strong>Free shipping</strong></li>
-              <li><span class="icon">📦</span> <strong>Easy order tracking</strong></li>
-            </ul>
-          </div>
-        </div>
-
-        {% form 'create_customer' %}
-          {{ form.errors | default_errors }}
-
-          <div class="name-fields">
-            <div class="input-group half">
-              <label for="RegisterFirstName">First Name</label>
-              <input type="text"
-                    name="customer[first_name]"
-                    id="RegisterFirstName"
-                    class="input-field {% if form.errors contains 'first_name' %}input-error{% endif %}"
-                    placeholder="First name"
-                    value="{{ form.first_name }}">
-            </div>
-
-            <div class="input-group half">
-              <label for="RegisterLastName">Last Name</label>
-              <input type="text"
-                    name="customer[last_name]"
-                    id="RegisterLastName"
-                    class="input-field {% if form.errors contains 'last_name' %}input-error{% endif %}"
-                    placeholder="Last name"
-                    value="{{ form.last_name }}">
-            </div>
-          </div>
-
-          <div class="input-group">
-            <label for="RegisterEmail">Email Address</label>
-            <input type="email"
-                  name="customer[email]"
-                  id="RegisterEmail"
-                  class="input-field {% if form.errors contains 'email' %}input-error{% endif %}"
-                  placeholder="Enter your email address"
-                  spellcheck="false"
-                  autocomplete="email"
-                  autocapitalize="off"
-                  value="{{ form.email }}">
-          </div>
-
-          <div class="input-group">
-            <label for="RegisterPassword">Password</label>
-            <input type="password"
-                  name="customer[password]"
-                  id="RegisterPassword"
-                  class="input-field {% if form.errors contains 'password' %}input-error{% endif %}"
-                  placeholder="Create a password">
-            <small class="password-help">Password must be at least 5 characters long</small>
-          </div>
-
-          <div class="checkbox-group">
-            <label class="checkbox-label">
-              <input type="checkbox" name="customer[accepts_marketing]" id="RegisterMarketing" {% if form.accepts_marketing %}checked{% endif %}>
-              I'd like to receive exclusive offers and updates via email
-            </label>
-          </div>
-
-          <div class="form-submit">
-            <input type="submit" class="btn btn-dark btn-fullwidth" value="Create Account">
-          </div>
-
-          <div class="terms">
-            <small>By creating an account, you agree to our Terms of Service and Privacy Policy.</small>
-          </div>
-
-        {% endform %}
-      </div>
-    </div>
   </div>
 </div>
 
