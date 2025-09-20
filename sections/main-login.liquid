@@ -18,6 +18,8 @@
             color: #333;
             background: #f8f9fa;
             padding: 0;
+            position: relative;
+            overflow-x: hidden;
         }
 
         .login-page {
@@ -157,7 +159,7 @@
             width: 100%;
             height: 100%;
             background: rgba(0, 0, 0, 0.7);
-            z-index: 1000;
+            z-index: 10000; /* Increased z-index */
             justify-content: center;
             align-items: center;
             padding: 20px;
@@ -167,8 +169,8 @@
             background: white;
             width: 100%;
             max-width: 500px;
-            max-height: 80vh; /* Reduced from 85vh */
-            overflow-y: auto;
+            max-height: 80vh; /* Reduced height */
+            overflow: hidden;
             position: relative;
             border-radius: 0; /* Pointy corners */
             box-shadow: 0 5px 25px rgba(0,0,0,0.3);
@@ -198,7 +200,7 @@
             position: sticky;
             top: 0;
             z-index: 10;
-            flex-shrink: 0; /* Prevent header from shrinking */
+            flex-shrink: 0;
         }
 
         .modal-header h2 {
@@ -221,6 +223,7 @@
             align-items: center;
             justify-content: center;
             transition: all 0.2s ease;
+            z-index: 10001; /* Ensure close button is above everything */
         }
 
         .modal-close:hover {
@@ -232,7 +235,7 @@
         .modal-body {
             padding: 2rem;
             overflow-y: auto;
-            flex-grow: 1; /* Allow body to grow and take available space */
+            flex-grow: 1;
         }
 
         /* Benefits list */
@@ -273,15 +276,11 @@
             }
             
             .modal-content {
-                max-height: 90vh; /* Adjusted for mobile */
+                max-height: 85vh; /* Adjusted for mobile */
             }
             
             .modal-body {
                 padding: 1.5rem;
-            }
-            
-            .modal-header {
-                padding: 1rem 1.5rem;
             }
         }
 
@@ -303,12 +302,16 @@
                 padding: 1rem;
             }
             
+            .modal-header {
+                padding: 1rem 1.5rem;
+            }
+            
             .modal-body {
                 padding: 1rem 1.5rem;
             }
             
             .modal-content {
-                max-height: 95vh; /* Adjusted for very small screens */
+                max-height: 90vh; /* Adjusted for very small screens */
             }
         }
 
