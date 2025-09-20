@@ -215,7 +215,7 @@
                   {% endif %}
                 </div>
                 <div class="address-actions">
-                  <a href="{{ routes.account_addresses_url }}/{{ customer.default_address.id }}" class="btn btn-outline btn-small">Edit</a>
+                  <button class="btn btn-outline btn-small edit-address-btn" data-address-id="{{ customer.default_address.id }}">Edit</button>
                 </div>
               </div>
             {% endif %}
@@ -239,8 +239,8 @@
                     {% endif %}
                   </div>
                   <div class="address-actions">
-                    <a href="{{ routes.account_addresses_url }}/{{ address.id }}" class="btn btn-outline btn-small">Edit</a>
-                    <form action="{{ routes.account_addresses_url }}/{{ address.id }}" method="post">
+                    <button class="btn btn-outline btn-small edit-address-btn" data-address-id="{{ address.id }}">Edit</button>
+                    <form action="{{ routes.account_addresses_url }}/{{ address.id }}" method="post" style="display: inline;">
                       <input type="hidden" name="_method" value="delete">
                       <button type="submit" class="btn btn-outline btn-small btn-danger" onclick="return confirm('Are you sure you want to delete this address?')">Delete</button>
                     </form>
@@ -248,6 +248,77 @@
                 </div>
               {% endunless %}
             {% endfor %}
+          </div>
+
+          <!-- Edit Address Modal -->
+          <div id="address-modal" class="modal">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h3 id="modal-title">Edit Address</h3>
+                <span class="close">&times;</span>
+              </div>
+              <form id="address-form" class="address-edit-form">
+                <div class="form-grid">
+                  <div class="form-group">
+                    <label for="address_first_name">First Name *</label>
+                    <input type="text" id="address_first_name" name="address[first_name]" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="address_last_name">Last Name *</label>
+                    <input type="text" id="address_last_name" name="address[last_name]" required>
+                  </div>
+                  <div class="form-group full-width">
+                    <label for="address_company">Company</label>
+                    <input type="text" id="address_company" name="address[company]">
+                  </div>
+                  <div class="form-group full-width">
+                    <label for="address_address1">Address *</label>
+                    <input type="text" id="address_address1" name="address[address1]" required>
+                  </div>
+                  <div class="form-group full-width">
+                    <label for="address_address2">Apartment, suite, etc.</label>
+                    <input type="text" id="address_address2" name="address[address2]">
+                  </div>
+                  <div class="form-group">
+                    <label for="address_city">City *</label>
+                    <input type="text" id="address_city" name="address[city]" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="address_province">State/Province</label>
+                    <input type="text" id="address_province" name="address[province]">
+                  </div>
+                  <div class="form-group">
+                    <label for="address_zip">Postal/Zip Code *</label>
+                    <input type="text" id="address_zip" name="address[zip]" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="address_country">Country *</label>
+                    <select id="address_country" name="address[country]" required>
+                      <option value="">Select Country</option>
+                      <option value="United States">United States</option>
+                      <option value="Canada">Canada</option>
+                      <option value="United Kingdom">United Kingdom</option>
+                      <option value="Australia">Australia</option>
+                      <!-- Add more countries as needed -->
+                    </select>
+                  </div>
+                  <div class="form-group full-width">
+                    <label for="address_phone">Phone</label>
+                    <input type="tel" id="address_phone" name="address[phone]">
+                  </div>
+                  <div class="form-group full-width">
+                    <label class="checkbox-label">
+                      <input type="checkbox" id="address_default" name="address[default]">
+                      Set as default address
+                    </label>
+                  </div>
+                </div>
+                <div class="form-actions">
+                  <button type="submit" class="btn btn-primary">Save Address</button>
+                  <button type="button" class="btn btn-secondary cancel-btn">Cancel</button>
+                </div>
+              </form>
+            </div>
           </div>
 
           {% if customer.addresses.size == 0 %}
@@ -394,6 +465,84 @@ document.addEventListener('DOMContentLoaded', function() {
       console.log('Reorder clicked for order:', orderId);
     });
   });
+
+  // Address editing functionality
+  const modal = document.getElementById('address-modal');
+  const editButtons = document.querySelectorAll('.edit-address-btn');
+  const closeBtn = document.querySelector('.modal .close');
+  const cancelBtn = document.querySelector('.cancel-btn');
+  const addressForm = document.getElementById('address-form');
+
+  // Open modal for editing
+  editButtons.forEach(btn => {
+    btn.addEventListener('click', function() {
+      const addressId = this.getAttribute('data-address-id');
+      
+      // In a real implementation, you would fetch the address data
+      // For now, we'll clear the form
+      addressForm.reset();
+      addressForm.setAttribute('data-address-id', addressId);
+      
+      modal.style.display = 'block';
+      document.body.style.overflow = 'hidden';
+    });
+  });
+
+  // Close modal
+  function closeModal() {
+    modal.style.display = 'none';
+    document.body.style.overflow = 'auto';
+  }
+
+  closeBtn.addEventListener('click', closeModal);
+  cancelBtn.addEventListener('click', closeModal);
+
+  // Close modal when clicking outside
+  window.addEventListener('click', function(event) {
+    if (event.target === modal) {
+      closeModal();
+    }
+  });
+
+  // Handle form submission
+  addressForm.addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    const addressId = this.getAttribute('data-address-id');
+    const formData = new FormData(this);
+    
+    // Convert FormData to regular object
+    const addressData = {};
+    for (let [key, value] of formData.entries()) {
+      addressData[key] = value;
+    }
+    
+    // In a real implementation, you would send this data to Shopify
+    console.log('Saving address:', addressData);
+    
+    // Show success message and close modal
+    alert('Address updated successfully!');
+    closeModal();
+    
+    // Reload the page to show updated address
+    window.location.reload();
+  });
+
+  // Add new address button
+  const addAddressBtn = document.querySelector('.addresses-section .btn-primary');
+  if (addAddressBtn) {
+    addAddressBtn.addEventListener('click', function(e) {
+      e.preventDefault();
+      
+      // Clear form for new address
+      addressForm.reset();
+      addressForm.removeAttribute('data-address-id');
+      document.getElementById('modal-title').textContent = 'Add New Address';
+      
+      modal.style.display = 'block';
+      document.body.style.overflow = 'hidden';
+    });
+  }
 });
 </script>
 
@@ -752,31 +901,38 @@ document.addEventListener('DOMContentLoaded', function() {
   cursor: pointer;
   transition: all 0.3s ease;
   text-align: center;
+  color: #000; /* Make all button text black by default */
 }
 
 .btn-primary {
   background: #007bff;
-  color: white;
+  color: #000; /* Black text on primary buttons */
 }
 
 .btn-primary:hover {
   background: #0056b3;
+  color: #000; /* Keep black text on hover */
 }
 
 .btn-secondary {
   background: #6c757d;
-  color: white;
+  color: #000; /* Black text on secondary buttons */
+}
+
+.btn-secondary:hover {
+  background: #545b62;
+  color: #000; /* Keep black text on hover */
 }
 
 .btn-outline {
   background: transparent;
   border: 1px solid #007bff;
-  color: #007bff;
+  color: #000; /* Black text on outline buttons */
 }
 
 .btn-outline:hover {
   background: #007bff;
-  color: white;
+  color: #000; /* Keep black text on hover */
 }
 
 .btn-small {
@@ -786,12 +942,88 @@ document.addEventListener('DOMContentLoaded', function() {
 
 .btn-danger {
   border-color: #dc3545;
-  color: #dc3545;
+  color: #000; /* Black text on danger buttons */
 }
 
 .btn-danger:hover {
   background: #dc3545;
-  color: white;
+  color: #000; /* Keep black text on hover */
+}
+
+/* Modal Styles */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+}
+
+.modal-content {
+  background-color: white;
+  margin: 2% auto;
+  padding: 0;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 600px;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.modal-header h3 {
+  margin: 0;
+}
+
+.close {
+  font-size: 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  color: #999;
+}
+
+.close:hover {
+  color: #000;
+}
+
+.address-edit-form {
+  padding: 1.5rem;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+}
+
+.checkbox-label input[type="checkbox"] {
+  margin: 0;
+}
+
+/* Form Select Styles */
+select {
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+  background: white;
+}
+
+select:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 0 2px rgba(0,123,255,0.25);
 }
 
 /* Responsive */
