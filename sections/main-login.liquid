@@ -119,9 +119,9 @@
           </ul>
         </div>
         
-        <button class="btn btn-success btn-join" id="openJoinModal">
+        <a href="{{ routes.account_register_url }}" class="btn btn-success btn-join">
           Join Jockey
-        </button>
+        </a>
         
         <p class="join-note">Plus exclusive access to member-only sales!</p>
       </div>
@@ -150,141 +150,12 @@
     </div>
 
   </div>
-
-  <!-- Join Jockey Modal Popup -->
-  <div id="joinModal" class="modal-overlay">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h2>Join Jockey</h2>
-        <button class="modal-close" id="closeModal">&times;</button>
-      </div>
-      
-      <div class="modal-body">
-        <div class="benefits-header">
-          <div class="benefits-box">
-            <h3>Benefits include</h3>
-            <ul class="benefits-list">
-              <li><span class="icon">💰</span> <strong>10% off all the time</strong></li>
-              <li><span class="icon">🚚</span> <strong>Free shipping</strong></li>
-              <li><span class="icon">📦</span> <strong>Easy order tracking</strong></li>
-            </ul>
-          </div>
-        </div>
-
-        {% form 'create_customer' %}
-          {{ form.errors | default_errors }}
-
-          <div class="name-fields">
-            <div class="input-group half">
-              <label for="RegisterFirstName">First Name</label>
-              <input type="text"
-                    name="customer[first_name]"
-                    id="RegisterFirstName"
-                    class="input-field {% if form.errors contains 'first_name' %}input-error{% endif %}"
-                    placeholder="First name"
-                    value="{{ form.first_name }}">
-            </div>
-
-            <div class="input-group half">
-              <label for="RegisterLastName">Last Name</label>
-              <input type="text"
-                    name="customer[last_name]"
-                    id="RegisterLastName"
-                    class="input-field {% if form.errors contains 'last_name' %}input-error{% endif %}"
-                    placeholder="Last name"
-                    value="{{ form.last_name }}">
-            </div>
-          </div>
-
-          <div class="input-group">
-            <label for="RegisterEmail">Email Address</label>
-            <input type="email"
-                  name="customer[email]"
-                  id="RegisterEmail"
-                  class="input-field {% if form.errors contains 'email' %}input-error{% endif %}"
-                  placeholder="Enter your email address"
-                  spellcheck="false"
-                  autocomplete="email"
-                  autocapitalize="off"
-                  value="{{ form.email }}">
-          </div>
-
-          <div class="input-group">
-            <label for="RegisterPassword">Password</label>
-            <input type="password"
-                  name="customer[password]"
-                  id="RegisterPassword"
-                  class="input-field {% if form.errors contains 'password' %}input-error{% endif %}"
-                  placeholder="Create a password">
-            <small class="password-help">Password must be at least 5 characters long</small>
-          </div>
-
-          <div class="checkbox-group">
-            <label class="checkbox-label">
-              <input type="checkbox" name="customer[accepts_marketing]" id="RegisterMarketing" {% if form.accepts_marketing %}checked{% endif %}>
-              I'd like to receive exclusive offers and updates via email
-            </label>
-          </div>
-
-          <div class="form-submit">
-            <input type="submit" class="btn btn-success btn-fullwidth" value="Create Account">
-          </div>
-
-          <div class="terms">
-            <small>By creating an account, you agree to our Terms of Service and Privacy Policy.</small>
-          </div>
-
-        {% endform %}
-      </div>
-    </div>
-  </div>
 </div>
 
 <script>
-// Simple vanilla JavaScript for modal and password recovery
+// Simple vanilla JavaScript for password recovery
 (function() {
-  // Modal functionality
-  var joinModal = document.getElementById('joinModal');
-  var openModalBtn = document.getElementById('openJoinModal');
-  var closeModalBtn = document.getElementById('closeModal');
-
-  // Open modal
-  if (openModalBtn && joinModal) {
-    openModalBtn.onclick = function(e) {
-      e.preventDefault();
-      joinModal.style.display = 'flex';
-      document.body.style.overflow = 'hidden';
-      return false;
-    };
-  }
-
-  // Close modal
-  function closeModal() {
-    if (joinModal) {
-      joinModal.style.display = 'none';
-      document.body.style.overflow = 'auto';
-    }
-  }
-
-  if (closeModalBtn) {
-    closeModalBtn.onclick = closeModal;
-  }
-
-  // Close modal when clicking outside
-  if (joinModal) {
-    joinModal.onclick = function(e) {
-      if (e.target === joinModal) {
-        closeModal();
-      }
-    };
-  }
-
-  // Close modal with Escape key
-  document.onkeydown = function(e) {
-    if (e.key === 'Escape' || e.keyCode === 27) {
-      closeModal();
-    }
-  };
+  // Modal functionality removed - now redirects to registration page
 
   // Password recovery toggle
   var recoverLink = document.getElementById('RecoverPassword');
@@ -315,15 +186,6 @@
   var resetSuccessDiv = document.getElementById('ResetSuccess');
   if (resetSuccess && resetSuccessDiv) {
     resetSuccessDiv.classList.remove('hide');
-  }
-
-  // Auto-open modal if there are registration errors
-  var modalForm = joinModal ? joinModal.querySelector('form') : null;
-  if (modalForm && modalForm.querySelector('.errors')) {
-    setTimeout(function() {
-      joinModal.style.display = 'flex';
-      document.body.style.overflow = 'hidden';
-    }, 100);
   }
 })();
 </script>
