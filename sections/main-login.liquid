@@ -1,115 +1,622 @@
+<!-- templates/customers/login.liquid -->
+
 <div class="container">
   <div class="page-width large-row">
-    <div class="account-form">
-      <div class="form-success hide" id="ResetSuccess">
-        {{ 'customer.recover_password.success' | t }}
-      </div>
+    
+    <!-- Welcome Header -->
+    <div class="login-header">
+      <h1 class="welcome-title">Welcome Back</h1>
+      <p class="welcome-subtitle">Sign in to your account to continue shopping</p>
+    </div>
 
-      <div id="CustomerLoginForm">
-        {% form 'customer_login' %}
-          <h1 class="title row">{{ 'customer.login.title' | t }}</h1>
+    <div class="login-wrapper">
+      <!-- Login Form Section -->
+      <div class="account-form login-form-section">
+        <div class="form-success hide" id="ResetSuccess">
+          {{ 'customer.recover_password.success' | t }}
+        </div>
 
-          {%- if section.settings.enable_shop_login_button -%}
-            <div class="text-center">
-              {{- shop | login_button -}}
-              <p>
-                {{ 'customer.login.alternate_provider_separator' | t }}
-              </p>
-            </div>
-          {%- endif -%}
+        <div id="CustomerLoginForm">
+          {% form 'customer_login' %}
+            <h2 class="form-title">Sign In</h2>
 
-          {{ form.errors | default_errors }}
-
-          <div class="input-wrapper form-row">
-            <label for="CustomerEmail">
-              {{ 'customer.login.email' | t }}
-            </label>
-            <input type="email"
-                  name="customer[email]"
-                  id="CustomerEmail"
-                  class="{% if form.errors contains 'email' %}input-error{% endif %}"
-                  spellcheck="false"
-                  autocomplete="off"
-                  autocapitalize="off"
-                  data-desktop-autofocus>
-          </div>
-
-          {% if form.password_needed %}
-            <div class="input-wrapper-with-overlay-link">
-              <div class="input-wrapper form-row">
-                <label for="CustomerPassword">
-                  {{ 'customer.login.password' | t }}
-                </label>
-                <input type="password"
-                      name="customer[password]"
-                      id="CustomerPassword"
-                      class="{% if form.errors contains 'password' %}input-error{% endif %}">
+            {%- if section.settings.enable_shop_login_button -%}
+              <div class="text-center shop-login-section">
+                {{- shop | login_button -}}
+                <p class="separator">
+                  {{ 'customer.login.alternate_provider_separator' | t }}
+                </p>
               </div>
-              <a href="#recover" class="input-overlay-link" id="RecoverPassword">{{ 'customer.login.forgot_password' | t }}</a>
+            {%- endif -%}
+
+            {{ form.errors | default_errors }}
+
+            <div class="input-wrapper form-row">
+              <label for="CustomerEmail">
+                {{ 'customer.login.email' | t }}
+              </label>
+              <input type="email"
+                    name="customer[email]"
+                    id="CustomerEmail"
+                    class="form-input {% if form.errors contains 'email' %}input-error{% endif %}"
+                    spellcheck="false"
+                    autocomplete="off"
+                    autocapitalize="off"
+                    placeholder="Enter your email address"
+                    data-desktop-autofocus>
             </div>
-          {% endif %}
 
-          <div class="large-row">
-            <input type="submit" class="btn btn--fullwidth" value="{{ 'customer.login.sign_in' | t }}">
-          </div>
+            {% if form.password_needed %}
+              <div class="input-wrapper-with-overlay-link">
+                <div class="input-wrapper form-row">
+                  <label for="CustomerPassword">
+                    {{ 'customer.login.password' | t }}
+                  </label>
+                  <input type="password"
+                        name="customer[password]"
+                        id="CustomerPassword"
+                        class="form-input {% if form.errors contains 'password' %}input-error{% endif %}"
+                        placeholder="Enter your password">
+                </div>
+                <a href="#recover" class="forgot-password-link" id="RecoverPassword">
+                  Forgot Your Password?
+                </a>
+              </div>
+            {% endif %}
 
-          <div class="row">
-            <a href="{{ routes.account_register_url }}">{{ 'layout.customer.create_account' | t }}</a>
-            &nbsp;&nbsp;&nbsp;
-            <a href="{{ routes.root_url }}">{{ 'customer.login.return_to_store' | t }}</a>
-          </div>
+            <div class="large-row">
+              <input type="submit" class="btn btn--primary btn--fullwidth" value="Sign In">
+            </div>
 
-        {% endform %}
+            <div class="login-footer-links">
+              <a href="{{ routes.root_url }}" class="return-store-link">
+                {{ 'customer.login.return_to_store' | t }}
+              </a>
+            </div>
 
+          {% endform %}
+
+        </div>
+
+        <div id="RecoverPasswordForm" class="hide">
+          <h2 class="form-title">Forgot Your Password?</h2>
+          <p class="recover-subtitle">Enter your email address and we'll send you a link to reset your password.</p>
+
+          {% form 'recover_customer_password' %}
+            {{ form.errors | default_errors }}
+
+            {% if form.posted_successfully? %}
+              <span class="hide reset-password-success"></span>
+            {% endif %}
+
+            <div class="input-wrapper form-row">
+              <label for="RecoverEmail">
+                {{ 'customer.recover_password.email' | t }}
+              </label>
+              <input type="email"
+                    name="email"
+                    id="RecoverEmail"
+                    class="form-input"
+                    spellcheck="false"
+                    autocomplete="off"
+                    autocapitalize="off"
+                    placeholder="Enter your email address">
+            </div>
+
+            <div class="large-row">
+              <input type="submit" class="btn btn--primary btn--fullwidth" value="Send Reset Link">
+            </div>
+
+            <div class="login-footer-links">
+              <a href="#" id="HideRecoverPasswordLink" class="back-to-login-link">
+                Back to Sign In
+              </a>
+            </div>
+          {% endform %}
+
+        </div>
       </div>
 
-      <div id="RecoverPasswordForm" class="hide">
-        <h2 class="title row">{{ 'customer.recover_password.title' | t }}</h2>
-        <p>{{ 'customer.recover_password.subtext' | t }}</p>
+      <!-- Join/Benefits Section -->
+      <div class="account-form signup-benefits-section">
+        <h2 class="join-title">Join Jockey</h2>
+        <p class="join-subtitle">Create an account and unlock exclusive benefits</p>
+        
+        <div class="benefits-section">
+          <h3 class="benefits-title">Benefits include</h3>
+          <ul class="benefits-list">
+            <li class="benefit-item">
+              <span class="benefit-icon">💰</span>
+              <strong>10% off all the time</strong>
+            </li>
+            <li class="benefit-item">
+              <span class="benefit-icon">🚚</span>
+              <strong>Free shipping</strong>
+            </li>
+            <li class="benefit-item">
+              <span class="benefit-icon">📦</span>
+              <strong>Easy order tracking</strong>
+            </li>
+          </ul>
+        </div>
 
-        {% form 'recover_customer_password' %}
-          {{ form.errors | default_errors }}
+        <div class="signup-action">
+          <a href="{{ routes.account_register_url }}" class="btn btn--secondary btn--fullwidth">
+            Create Account
+          </a>
+        </div>
 
-          {% if form.posted_successfully? %}
-            <span class="hide reset-password-success"></span>
-          {% endif %}
-
-          <div class="input-wrapper form-row">
-            <label for="RecoverEmail">
-              {{ 'customer.recover_password.email' | t }}
-            </label>
-            <input type="email"
-                  name="email"
-                  id="RecoverEmail"
-                  spellcheck="false"
-                  autocomplete="off"
-                  autocapitalize="off">
-          </div>
-
-          <div class="large-row">
-            <input type="submit" class="btn btn--fullwidth" value="{{ 'customer.recover_password.submit' | t }}">
-          </div>
-
-          <div class="row">
-            <a href="#" id="HideRecoverPasswordLink">{{ 'customer.recover_password.cancel' | t }}</a>
-          </div>
-        {% endform %}
-
+        <div class="additional-benefits">
+          <p class="extra-benefit">Plus exclusive access to member-only sales and early product launches!</p>
+        </div>
       </div>
     </div>
 
     {% if shop.checkout.guest_login %}
-      <div class="account-form">
-        <h2 class="title row">{{ 'customer.login.guest_title' | t }}</h2>
+      <div class="guest-checkout-section">
+        <div class="guest-divider">
+          <span class="divider-text">Or</span>
+        </div>
+        
+        <div class="account-form guest-form">
+          <h3 class="guest-title">{{ 'customer.login.guest_title' | t }}</h3>
+          <p class="guest-subtitle">Continue as a guest if you prefer not to create an account</p>
 
-        {% form 'guest_login' %}
-          <input type="submit" class="btn" value="{{ 'customer.login.guest_continue' | t }}">
-        {% endform %}
+          {% form 'guest_login' %}
+            <input type="submit" class="btn btn--outline btn--fullwidth" value="{{ 'customer.login.guest_continue' | t }}">
+          {% endform %}
+        </div>
       </div>
     {% endif %}
   </div>
 </div>
 
+<!-- JavaScript for Login Form -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const recoverPasswordLink = document.getElementById('RecoverPassword');
+  const hideRecoverPasswordLink = document.getElementById('HideRecoverPasswordLink');
+  const loginForm = document.getElementById('CustomerLoginForm');
+  const recoverForm = document.getElementById('RecoverPasswordForm');
+  const resetSuccess = document.getElementById('ResetSuccess');
+
+  // Show recover password form
+  if (recoverPasswordLink) {
+    recoverPasswordLink.addEventListener('click', function(e) {
+      e.preventDefault();
+      loginForm.classList.add('hide');
+      recoverForm.classList.remove('hide');
+    });
+  }
+
+  // Hide recover password form
+  if (hideRecoverPasswordLink) {
+    hideRecoverPasswordLink.addEventListener('click', function(e) {
+      e.preventDefault();
+      recoverForm.classList.add('hide');
+      loginForm.classList.remove('hide');
+    });
+  }
+
+  // Check if password reset was successful
+  const resetPasswordSuccess = document.querySelector('.reset-password-success');
+  if (resetPasswordSuccess) {
+    resetSuccess.classList.remove('hide');
+    setTimeout(function() {
+      recoverForm.classList.add('hide');
+      loginForm.classList.remove('hide');
+    }, 3000);
+  }
+
+  // Auto-focus on email field for desktop
+  const emailInput = document.querySelector('[data-desktop-autofocus]');
+  if (emailInput && window.innerWidth > 768) {
+    emailInput.focus();
+  }
+
+  // Form validation enhancement
+  const forms = document.querySelectorAll('form');
+  forms.forEach(form => {
+    form.addEventListener('submit', function(e) {
+      const submitBtn = form.querySelector('input[type="submit"]');
+      if (submitBtn) {
+        submitBtn.value = 'Please wait...';
+        submitBtn.disabled = true;
+      }
+    });
+  });
+});
+</script>
+
+<style>
+/* Login Page Styles */
+.container {
+  padding: 2rem 0;
+}
+
+.login-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.welcome-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin: 0 0 0.5rem 0;
+  color: #333;
+}
+
+.welcome-subtitle {
+  font-size: 1.1rem;
+  color: #666;
+  margin: 0;
+}
+
+.login-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Login Form Section */
+.login-form-section {
+  background: #f8f9fa;
+  border-radius: 8px;
+  padding: 2rem;
+}
+
+.form-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0 0 1.5rem 0;
+  text-align: center;
+  color: #333;
+}
+
+.shop-login-section {
+  margin-bottom: 1.5rem;
+}
+
+.separator {
+  margin: 1rem 0;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+/* Form Inputs */
+.input-wrapper {
+  margin-bottom: 1.5rem;
+}
+
+.input-wrapper label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: #333;
+}
+
+.form-input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 0 2px rgba(0,123,255,0.25);
+}
+
+.form-input.input-error {
+  border-color: #dc3545;
+}
+
+.input-wrapper-with-overlay-link {
+  position: relative;
+}
+
+.forgot-password-link {
+  color: #007bff;
+  text-decoration: none;
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+  display: inline-block;
+}
+
+.forgot-password-link:hover {
+  text-decoration: underline;
+}
+
+.login-footer-links {
+  text-align: center;
+  margin-top: 1.5rem;
+}
+
+.return-store-link,
+.back-to-login-link {
+  color: #007bff;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.return-store-link:hover,
+.back-to-login-link:hover {
+  text-decoration: underline;
+}
+
+/* Recover Password Form */
+.recover-subtitle {
+  color: #666;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+/* Join/Benefits Section */
+.signup-benefits-section {
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 2rem;
+}
+
+.join-title {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin: 0 0 0.5rem 0;
+  text-align: center;
+  color: #333;
+}
+
+.join-subtitle {
+  color: #666;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.benefits-section {
+  margin-bottom: 2rem;
+}
+
+.benefits-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 0 0 1rem 0;
+  color: #333;
+}
+
+.benefits-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.benefit-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.benefit-item:last-child {
+  border-bottom: none;
+}
+
+.benefit-icon {
+  font-size: 1.2rem;
+  width: 24px;
+  text-align: center;
+}
+
+.benefit-item strong {
+  color: #333;
+  font-weight: 600;
+}
+
+.signup-action {
+  margin-bottom: 1.5rem;
+}
+
+.additional-benefits {
+  text-align: center;
+  padding-top: 1rem;
+  border-top: 1px solid #f0f0f0;
+}
+
+.extra-benefit {
+  color: #666;
+  font-size: 0.9rem;
+  margin: 0;
+  font-style: italic;
+}
+
+/* Guest Checkout Section */
+.guest-checkout-section {
+  margin-top: 3rem;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.guest-divider {
+  text-align: center;
+  position: relative;
+  margin: 2rem 0;
+}
+
+.guest-divider::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: #e0e0e0;
+}
+
+.divider-text {
+  background: white;
+  padding: 0 1rem;
+  color: #666;
+  font-size: 0.9rem;
+  position: relative;
+}
+
+.guest-form {
+  background: #f8f9fa;
+  border-radius: 8px;
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.guest-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 0 0 0.5rem 0;
+  color: #333;
+}
+
+.guest-subtitle {
+  color: #666;
+  margin-bottom: 1.5rem;
+  font-size: 0.9rem;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: center;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.btn--fullwidth {
+  width: 100%;
+}
+
+.btn--primary {
+  background: #007bff;
+  color: white;
+}
+
+.btn--primary:hover {
+  background: #0056b3;
+}
+
+.btn--secondary {
+  background: #28a745;
+  color: white;
+}
+
+.btn--secondary:hover {
+  background: #218838;
+}
+
+.btn--outline {
+  background: transparent;
+  border: 1px solid #007bff;
+  color: #007bff;
+}
+
+.btn--outline:hover {
+  background: #007bff;
+  color: white;
+}
+
+.btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Form Success/Error Messages */
+.form-success {
+  background: #d4edda;
+  color: #155724;
+  padding: 0.75rem;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+  border: 1px solid #c3e6cb;
+}
+
+.errors {
+  background: #f8d7da;
+  color: #721c24;
+  padding: 0.75rem;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+  border: 1px solid #f5c6cb;
+}
+
+/* Utility Classes */
+.hide {
+  display: none !important;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.row {
+  margin-bottom: 1rem;
+}
+
+.large-row {
+  margin-bottom: 1.5rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .login-wrapper {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .welcome-title {
+    font-size: 2rem;
+  }
+  
+  .login-form-section,
+  .signup-benefits-section {
+    padding: 1.5rem;
+  }
+  
+  .join-title {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 1rem 0;
+  }
+  
+  .login-header {
+    margin-bottom: 2rem;
+  }
+  
+  .welcome-title {
+    font-size: 1.8rem;
+  }
+  
+  .login-form-section,
+  .signup-benefits-section,
+  .guest-form {
+    padding: 1rem;
+  }
+}
+</style>
 
 {% schema %}
   {
