@@ -497,9 +497,47 @@
       "1615317077f9e0dce4"
     ],
     "blocks": {
+      "11356494674496455976": {
+        "type": "shopify://apps/froonze-loyalty-wishlist/blocks/loyalty/3c495b68-652c-468d-a0ef-5bad6935d104",
+        "disabled": false,
+        "settings": {}
+      },
+      "12046557757412368804": {
+        "type": "shopify://apps/froonze-loyalty-wishlist/blocks/customer_account_page/3c495b68-652c-468d-a0ef-5bad6935d104",
+        "disabled": false,
+        "settings": {
+          "style": "light",
+          "dropdownMenu": "slider",
+          "mobile_nav_offset_top": 0,
+          "shadow": true,
+          "border_radius": 4,
+          "background_color": "#ffffff",
+          "text_color": "#202202",
+          "primary_color": "#5873F9",
+          "btn_text_color": "#ffffff",
+          "max_width": 800,
+          "custom_css": ""
+        }
+      },
+      "6471712195879653093": {
+        "type": "shopify://apps/froonze-loyalty-wishlist/blocks/social_logins/3c495b68-652c-468d-a0ef-5bad6935d104",
+        "disabled": false,
+        "settings": {
+          "position": "below",
+          "divider": true,
+          "style": "icon_and_text",
+          "text_alignment": "center",
+          "icon_alignment": "left",
+          "icon_style": "white",
+          "border_radius": 4,
+          "spacing": 8,
+          "shadow": true,
+          "custom_css": ""
+        }
+      },
       "11074193060611426105": {
         "type": "shopify://apps/froonze-loyalty-wishlist/blocks/product_wishlist/3c495b68-652c-468d-a0ef-5bad6935d104",
-        "disabled": true,
+        "disabled": false,
         "settings": {
           "add_button_color": "#5873F9",
           "add_button_text_color": "#ffffff",
@@ -525,8 +563,8 @@
           "custom_css": ""
         }
       },
-      "11356494674496455976": {
-        "type": "shopify://apps/froonze-loyalty-wishlist/blocks/loyalty/3c495b68-652c-468d-a0ef-5bad6935d104",
+      "8409675092115237846": {
+        "type": "shopify://apps/froonze-loyalty-wishlist/blocks/custom_forms/3c495b68-652c-468d-a0ef-5bad6935d104",
         "disabled": false,
         "settings": {}
       }
