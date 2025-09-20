@@ -1,36 +1,44 @@
-<div class="container">
-  <div class="page-width large-row">
-    <h1 class="large-title row no-margin-bottom-mobile center">{{ 'customer.account.title' | t }}</h1>
+{% comment %}
+  Custom AU-Style Account Page
+{% endcomment %}
 
-    <div class="hidden mobile-only text-center very-large-row-under"><a href="{{ routes.account_logout_url }}">{{ 'layout.customer.log_out' | t }}</a></div>
+<div class="account-wrapper">
+  <!-- Sidebar -->
+  <aside class="account-sidebar">
+    <h3>{{ 'customer.account.title' | t }}</h3>
+    <ul>
+      <li><a href="/account">{{ 'customer.account.dashboard' | t }}</a></li>
+      <li><a href="/account/orders">{{ 'customer.orders.title' | t }}</a></li>
+      <li><a href="{{ routes.account_addresses_url }}">{{ 'customer.account.view_addresses' | t }}</a></li>
+      <li><a href="{{ routes.account_logout_url }}">{{ 'layout.customer.log_out' | t }}</a></li>
+    </ul>
+  </aside>
 
-    <div class="large-row">
-      <div class="grid row">
-        <div class="grid__item one-half small-down--one-whole">
-          <h2 class="title">{{ 'customer.account.details' | t }}</h2>
-        </div>
-        <div class="grid__item one-half small-down--one-whole text-right small-down--text-left">
-          <a class="standard-link" href="{{ routes.account_addresses_url }}">{{ 'customer.account.view_addresses' | t }} ({{ customer.addresses_count }})</a>
-        </div>
+  <!-- Main Content -->
+  <section class="account-main">
+    <!-- Account Details -->
+    <div class="account-card">
+      <div class="account-card-header">
+        <h2>{{ 'customer.account.details' | t }}</h2>
+        <a href="{{ routes.account_addresses_url }}" class="btn-link">
+          {{ 'customer.account.view_addresses' | t }} ({{ customer.addresses_count }})
+        </a>
       </div>
-
       {% if customer.addresses_count > 0 %}
-        <div class="grid row">
-          <div class="grid__item one-half small-down--one-whole">
-            <div class="address-card">
-              {% render 'format-address' with customer.default_address %}
-            </div>
-          </div>
+        <div class="address-card">
+          {% render 'format-address', address: customer.default_address %}
         </div>
+      {% else %}
+        <p>{{ 'customer.account.no_addresses' | t }}</p>
       {% endif %}
     </div>
 
-    <div class="large-row">
-      <h2 class="title">{{ 'customer.orders.title' | t }}</h2>
-
-      {% paginate customer.orders by 20 %}
-        {% if customer.orders.size != 0 %}
-          <table class="responsive-table">
+    <!-- Orders -->
+    <div class="account-card">
+      <h2>{{ 'customer.orders.title' | t }}</h2>
+      {% paginate customer.orders by 10 %}
+        {% if customer.orders.size > 0 %}
+          <table class="orders-table">
             <thead>
               <tr>
                 <th>{{ 'customer.orders.order_number' | t }}</th>
@@ -38,24 +46,24 @@
                 <th>{{ 'customer.orders.payment_status' | t }}</th>
                 <th>{{ 'customer.orders.fulfillment_status' | t }}</th>
                 <th class="text-right">{{ 'customer.orders.total' | t }}</th>
-                <td>&nbsp;</td>
+                <th></th>
               </tr>
             </thead>
             <tbody>
               {% for order in customer.orders %}
-                <tr class="responsive-table-row">
-                  <td data-label="{{ 'customer.orders.order_number' | t }}">{{ order.name | link_to: order.customer_url }}</td>
-                  <td data-label="{{ 'customer.orders.date' | t }}">{{ order.created_at | date: format: 'month_day_year' }}</td>
-                  <td data-label="{{ 'customer.orders.payment_status' | t }}">{{ order.financial_status_label }}</td>
-                  <td data-label="{{ 'customer.orders.fulfillment_status' | t }}">{{ order.fulfillment_status_label }}</td>
-                  <td class="text-right" data-label="{{ 'customer.orders.total' | t }}">
+                <tr>
+                  <td>{{ order.name | link_to: order.customer_url }}</td>
+                  <td>{{ order.created_at | date: "%b %d, %Y" }}</td>
+                  <td>{{ order.financial_status_label }}</td>
+                  <td>{{ order.fulfillment_status_label }}</td>
+                  <td class="text-right">
                     {%- if settings.cart_currency_code_enabled -%}
-                      {{- order.total_price | money_with_currency -}}
+                      {{ order.total_price | money_with_currency }}
                     {%- else -%}
-                      {{- order.total_price | money -}}
+                      {{ order.total_price | money }}
                     {%- endif -%}
                   </td>
-                  <td class="text-right"><a class="btn btn--secondary" href="{{ order.customer_url }}">{{ 'customer.orders.view_order' | t }}</a></td>
+                  <td><a class="btn btn--secondary small" href="{{ order.customer_url }}">{{ 'customer.orders.view_order' | t }}</a></td>
                 </tr>
               {% endfor %}
             </tbody>
@@ -63,12 +71,85 @@
         {% else %}
           <p>{{ 'customer.orders.none' | t }}</p>
         {% endif %}
-
         {% if paginate.pages > 1 %}
           {% render 'pagination', paginate: paginate %}
         {% endif %}
-
       {% endpaginate %}
     </div>
-  </div>
+  </section>
 </div>
+
+<style>
+  .account-wrapper {
+    display: flex;
+    gap: 2rem;
+    margin: 2rem 0;
+  }
+  .account-sidebar {
+    width: 220px;
+    background: #f9f9f9;
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 1px solid #e5e5e5;
+  }
+  .account-sidebar h3 {
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+  }
+  .account-sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .account-sidebar li {
+    margin-bottom: 0.75rem;
+  }
+  .account-sidebar a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+  }
+  .account-sidebar a:hover {
+    color: #0077cc;
+  }
+  .account-main {
+    flex: 1;
+  }
+  .account-card {
+    background: #fff;
+    border: 1px solid #e5e5e5;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  }
+  .account-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+  .orders-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  .orders-table th,
+  .orders-table td {
+    padding: 0.75rem;
+    border-bottom: 1px solid #eee;
+    text-align: left;
+    font-size: 0.95rem;
+  }
+  .orders-table th {
+    background: #fafafa;
+    font-weight: 600;
+  }
+  .btn-link {
+    font-size: 0.9rem;
+    color: #0077cc;
+    text-decoration: none;
+  }
+  .btn-link:hover {
+    text-decoration: underline;
+  }
+</style>
